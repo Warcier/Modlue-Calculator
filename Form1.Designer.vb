@@ -26,40 +26,40 @@ Partial Class frmCalculator
         Me.txtFullname = New System.Windows.Forms.TextBox()
         Me.lblHeader1 = New System.Windows.Forms.Label()
         Me.lblHeader2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lblSubHeader1 = New System.Windows.Forms.Label()
+        Me.lblQuizzes = New System.Windows.Forms.Label()
+        Me.lblTest = New System.Windows.Forms.Label()
+        Me.lblProject = New System.Windows.Forms.Label()
+        Me.lblExam = New System.Windows.Forms.Label()
+        Me.txtQuizzes = New System.Windows.Forms.TextBox()
+        Me.txtTest = New System.Windows.Forms.TextBox()
+        Me.txtExam = New System.Windows.Forms.TextBox()
+        Me.txtProject = New System.Windows.Forms.TextBox()
+        Me.lblCAmark = New System.Windows.Forms.Label()
+        Me.lblModule_Grade = New System.Windows.Forms.Label()
+        Me.lblModule_Marks = New System.Windows.Forms.Label()
+        Me.lblRemarks = New System.Windows.Forms.Label()
+        Me.txtModule_Marks = New System.Windows.Forms.TextBox()
+        Me.txtRemarks = New System.Windows.Forms.TextBox()
+        Me.txtCAMark = New System.Windows.Forms.TextBox()
+        Me.txtModule_Grade = New System.Windows.Forms.TextBox()
+        Me.lstStudent_Record = New System.Windows.Forms.ListBox()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnConfirm = New System.Windows.Forms.Button()
+        Me.lblSubHeader2 = New System.Windows.Forms.Label()
+        Me.lblHeader3 = New System.Windows.Forms.Label()
+        Me.txtCountToF = New System.Windows.Forms.TextBox()
+        Me.txtModule_Average = New System.Windows.Forms.TextBox()
+        Me.txtNoStudents = New System.Windows.Forms.TextBox()
+        Me.txtCountToA = New System.Windows.Forms.TextBox()
+        Me.lblModule_Average = New System.Windows.Forms.Label()
+        Me.lblCountF = New System.Windows.Forms.Label()
+        Me.lblCountA = New System.Windows.Forms.Label()
+        Me.lblNoStudents = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnShowStats = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblName
@@ -107,203 +107,203 @@ Partial Class frmCalculator
         Me.lblHeader2.TabIndex = 4
         Me.lblHeader2.Text = "Input CA and Exam Mark"
         '
-        'Label1
+        'lblSubHeader1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label1.Location = New System.Drawing.Point(28, 214)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 22)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "CA Componenet:"
+        Me.lblSubHeader1.AutoSize = True
+        Me.lblSubHeader1.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblSubHeader1.Location = New System.Drawing.Point(28, 214)
+        Me.lblSubHeader1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSubHeader1.Name = "lblSubHeader1"
+        Me.lblSubHeader1.Size = New System.Drawing.Size(139, 22)
+        Me.lblSubHeader1.TabIndex = 5
+        Me.lblSubHeader1.Text = "CA Componenet:"
         '
-        'Label2
+        'lblQuizzes
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label2.Location = New System.Drawing.Point(23, 296)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 22)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Quizzes"
+        Me.lblQuizzes.AutoSize = True
+        Me.lblQuizzes.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblQuizzes.Location = New System.Drawing.Point(23, 296)
+        Me.lblQuizzes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblQuizzes.Name = "lblQuizzes"
+        Me.lblQuizzes.Size = New System.Drawing.Size(71, 22)
+        Me.lblQuizzes.TabIndex = 6
+        Me.lblQuizzes.Text = "Quizzes"
         '
-        'Label3
+        'lblTest
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label3.Location = New System.Drawing.Point(23, 265)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 22)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Test"
+        Me.lblTest.AutoSize = True
+        Me.lblTest.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblTest.Location = New System.Drawing.Point(23, 265)
+        Me.lblTest.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTest.Name = "lblTest"
+        Me.lblTest.Size = New System.Drawing.Size(46, 22)
+        Me.lblTest.TabIndex = 7
+        Me.lblTest.Text = "Test"
         '
-        'Label4
+        'lblProject
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label4.Location = New System.Drawing.Point(23, 328)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 22)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Project"
+        Me.lblProject.AutoSize = True
+        Me.lblProject.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblProject.Location = New System.Drawing.Point(23, 328)
+        Me.lblProject.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblProject.Name = "lblProject"
+        Me.lblProject.Size = New System.Drawing.Size(66, 22)
+        Me.lblProject.TabIndex = 8
+        Me.lblProject.Text = "Project"
         '
-        'Label5
+        'lblExam
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label5.Location = New System.Drawing.Point(23, 360)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 22)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Exam"
+        Me.lblExam.AutoSize = True
+        Me.lblExam.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblExam.Location = New System.Drawing.Point(23, 360)
+        Me.lblExam.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblExam.Name = "lblExam"
+        Me.lblExam.Size = New System.Drawing.Size(52, 22)
+        Me.lblExam.TabIndex = 9
+        Me.lblExam.Text = "Exam"
         '
-        'TextBox1
+        'txtQuizzes
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(150, 296)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox1.TabIndex = 10
+        Me.txtQuizzes.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtQuizzes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtQuizzes.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtQuizzes.Location = New System.Drawing.Point(150, 296)
+        Me.txtQuizzes.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtQuizzes.Name = "txtQuizzes"
+        Me.txtQuizzes.Size = New System.Drawing.Size(96, 17)
+        Me.txtQuizzes.TabIndex = 10
         '
-        'TextBox2
+        'txtTest
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(150, 265)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox2.TabIndex = 11
+        Me.txtTest.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtTest.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTest.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtTest.Location = New System.Drawing.Point(150, 265)
+        Me.txtTest.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtTest.Name = "txtTest"
+        Me.txtTest.Size = New System.Drawing.Size(96, 17)
+        Me.txtTest.TabIndex = 11
         '
-        'TextBox3
+        'txtExam
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(150, 360)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox3.TabIndex = 12
+        Me.txtExam.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtExam.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtExam.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtExam.Location = New System.Drawing.Point(150, 360)
+        Me.txtExam.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtExam.Name = "txtExam"
+        Me.txtExam.Size = New System.Drawing.Size(96, 17)
+        Me.txtExam.TabIndex = 12
         '
-        'TextBox4
+        'txtProject
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(150, 328)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox4.TabIndex = 13
+        Me.txtProject.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtProject.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtProject.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtProject.Location = New System.Drawing.Point(150, 328)
+        Me.txtProject.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtProject.Name = "txtProject"
+        Me.txtProject.Size = New System.Drawing.Size(96, 17)
+        Me.txtProject.TabIndex = 13
         '
-        'Label6
+        'lblCAmark
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label6.Location = New System.Drawing.Point(305, 260)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 22)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "CA Mark"
+        Me.lblCAmark.AutoSize = True
+        Me.lblCAmark.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblCAmark.Location = New System.Drawing.Point(305, 260)
+        Me.lblCAmark.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCAmark.Name = "lblCAmark"
+        Me.lblCAmark.Size = New System.Drawing.Size(73, 22)
+        Me.lblCAmark.TabIndex = 14
+        Me.lblCAmark.Text = "CA Mark"
         '
-        'Label7
+        'lblModule_Grade
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label7.Location = New System.Drawing.Point(305, 291)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(118, 22)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Module Grade"
+        Me.lblModule_Grade.AutoSize = True
+        Me.lblModule_Grade.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblModule_Grade.Location = New System.Drawing.Point(305, 291)
+        Me.lblModule_Grade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblModule_Grade.Name = "lblModule_Grade"
+        Me.lblModule_Grade.Size = New System.Drawing.Size(118, 22)
+        Me.lblModule_Grade.TabIndex = 15
+        Me.lblModule_Grade.Text = "Module Grade"
         '
-        'Label8
+        'lblModule_Marks
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label8.Location = New System.Drawing.Point(305, 323)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(118, 22)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Module Marks"
+        Me.lblModule_Marks.AutoSize = True
+        Me.lblModule_Marks.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblModule_Marks.Location = New System.Drawing.Point(305, 323)
+        Me.lblModule_Marks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblModule_Marks.Name = "lblModule_Marks"
+        Me.lblModule_Marks.Size = New System.Drawing.Size(118, 22)
+        Me.lblModule_Marks.TabIndex = 16
+        Me.lblModule_Marks.Text = "Module Marks"
         '
-        'Label9
+        'lblRemarks
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label9.Location = New System.Drawing.Point(305, 355)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(76, 22)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Remarks"
+        Me.lblRemarks.AutoSize = True
+        Me.lblRemarks.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblRemarks.Location = New System.Drawing.Point(305, 355)
+        Me.lblRemarks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblRemarks.Name = "lblRemarks"
+        Me.lblRemarks.Size = New System.Drawing.Size(76, 22)
+        Me.lblRemarks.TabIndex = 17
+        Me.lblRemarks.Text = "Remarks"
         '
-        'TextBox5
+        'txtModule_Marks
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(458, 328)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox5.TabIndex = 21
+        Me.txtModule_Marks.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Marks.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtModule_Marks.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtModule_Marks.Location = New System.Drawing.Point(458, 328)
+        Me.txtModule_Marks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtModule_Marks.Name = "txtModule_Marks"
+        Me.txtModule_Marks.Size = New System.Drawing.Size(96, 17)
+        Me.txtModule_Marks.TabIndex = 21
         '
-        'TextBox6
+        'txtRemarks
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(458, 359)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox6.TabIndex = 20
+        Me.txtRemarks.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRemarks.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtRemarks.Location = New System.Drawing.Point(458, 359)
+        Me.txtRemarks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtRemarks.Name = "txtRemarks"
+        Me.txtRemarks.Size = New System.Drawing.Size(96, 17)
+        Me.txtRemarks.TabIndex = 20
         '
-        'TextBox7
+        'txtCAMark
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox7.Location = New System.Drawing.Point(458, 264)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox7.TabIndex = 19
+        Me.txtCAMark.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCAMark.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCAMark.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtCAMark.Location = New System.Drawing.Point(458, 264)
+        Me.txtCAMark.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtCAMark.Name = "txtCAMark"
+        Me.txtCAMark.Size = New System.Drawing.Size(96, 17)
+        Me.txtCAMark.TabIndex = 19
         '
-        'TextBox8
+        'txtModule_Grade
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox8.Font = New System.Drawing.Font("Neo Sans", 10.0!)
-        Me.TextBox8.Location = New System.Drawing.Point(458, 296)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(96, 17)
-        Me.TextBox8.TabIndex = 18
+        Me.txtModule_Grade.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Grade.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtModule_Grade.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtModule_Grade.Location = New System.Drawing.Point(458, 296)
+        Me.txtModule_Grade.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtModule_Grade.Name = "txtModule_Grade"
+        Me.txtModule_Grade.Size = New System.Drawing.Size(96, 17)
+        Me.txtModule_Grade.TabIndex = 18
         '
-        'ListBox1
+        'lstStudent_Record
         '
-        Me.ListBox1.BackColor = System.Drawing.Color.RosyBrown
-        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(1085, -2)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(307, 700)
-        Me.ListBox1.TabIndex = 22
+        Me.lstStudent_Record.BackColor = System.Drawing.Color.RosyBrown
+        Me.lstStudent_Record.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lstStudent_Record.FormattingEnabled = True
+        Me.lstStudent_Record.ItemHeight = 20
+        Me.lstStudent_Record.Location = New System.Drawing.Point(1085, -2)
+        Me.lstStudent_Record.Name = "lstStudent_Record"
+        Me.lstStudent_Record.Size = New System.Drawing.Size(307, 700)
+        Me.lstStudent_Record.TabIndex = 22
         '
         'btnExit
         '
@@ -316,137 +316,137 @@ Partial Class frmCalculator
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnClear
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(84, 104)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(261, 30)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Clear All"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.Location = New System.Drawing.Point(84, 104)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(261, 30)
+        Me.btnClear.TabIndex = 24
+        Me.btnClear.Text = "Clear All"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnConfirm
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(177, 395)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(204, 31)
-        Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Confirm"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfirm.ForeColor = System.Drawing.Color.White
+        Me.btnConfirm.Location = New System.Drawing.Point(177, 395)
+        Me.btnConfirm.Name = "btnConfirm"
+        Me.btnConfirm.Size = New System.Drawing.Size(204, 31)
+        Me.btnConfirm.TabIndex = 25
+        Me.btnConfirm.Text = "Confirm"
+        Me.btnConfirm.UseVisualStyleBackColor = True
         '
-        'Label10
+        'lblSubHeader2
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Neo Sans", 13.0!)
-        Me.Label10.Location = New System.Drawing.Point(305, 214)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(126, 22)
-        Me.Label10.TabIndex = 26
-        Me.Label10.Text = "Module Result:"
+        Me.lblSubHeader2.AutoSize = True
+        Me.lblSubHeader2.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblSubHeader2.Location = New System.Drawing.Point(305, 214)
+        Me.lblSubHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSubHeader2.Name = "lblSubHeader2"
+        Me.lblSubHeader2.Size = New System.Drawing.Size(126, 22)
+        Me.lblSubHeader2.TabIndex = 26
+        Me.lblSubHeader2.Text = "Module Result:"
         '
-        'Label11
+        'lblHeader3
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Neo Sans", 18.0!)
-        Me.Label11.Location = New System.Drawing.Point(599, 31)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(181, 30)
-        Me.Label11.TabIndex = 28
-        Me.Label11.Text = "Module Statistic"
+        Me.lblHeader3.AutoSize = True
+        Me.lblHeader3.Font = New System.Drawing.Font("Neo Sans", 18.0!)
+        Me.lblHeader3.Location = New System.Drawing.Point(599, 31)
+        Me.lblHeader3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblHeader3.Name = "lblHeader3"
+        Me.lblHeader3.Size = New System.Drawing.Size(181, 30)
+        Me.lblHeader3.TabIndex = 28
+        Me.lblHeader3.Text = "Module Statistic"
         '
-        'TextBox9
+        'txtCountToF
         '
-        Me.TextBox9.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox9.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.TextBox9.Location = New System.Drawing.Point(859, 250)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(146, 25)
-        Me.TextBox9.TabIndex = 36
+        Me.txtCountToF.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCountToF.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCountToF.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtCountToF.Location = New System.Drawing.Point(859, 250)
+        Me.txtCountToF.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtCountToF.Name = "txtCountToF"
+        Me.txtCountToF.Size = New System.Drawing.Size(146, 25)
+        Me.txtCountToF.TabIndex = 36
         '
-        'TextBox10
+        'txtModule_Average
         '
-        Me.TextBox10.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox10.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.TextBox10.Location = New System.Drawing.Point(859, 301)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(146, 25)
-        Me.TextBox10.TabIndex = 35
+        Me.txtModule_Average.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Average.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtModule_Average.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtModule_Average.Location = New System.Drawing.Point(859, 301)
+        Me.txtModule_Average.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtModule_Average.Name = "txtModule_Average"
+        Me.txtModule_Average.Size = New System.Drawing.Size(146, 25)
+        Me.txtModule_Average.TabIndex = 35
         '
-        'TextBox11
+        'txtNoStudents
         '
-        Me.TextBox11.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox11.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.TextBox11.Location = New System.Drawing.Point(859, 143)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(146, 25)
-        Me.TextBox11.TabIndex = 34
+        Me.txtNoStudents.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNoStudents.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtNoStudents.Location = New System.Drawing.Point(859, 143)
+        Me.txtNoStudents.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtNoStudents.Name = "txtNoStudents"
+        Me.txtNoStudents.Size = New System.Drawing.Size(146, 25)
+        Me.txtNoStudents.TabIndex = 34
         '
-        'TextBox12
+        'txtCountToA
         '
-        Me.TextBox12.BackColor = System.Drawing.Color.RosyBrown
-        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox12.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.TextBox12.Location = New System.Drawing.Point(859, 199)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(146, 25)
-        Me.TextBox12.TabIndex = 33
+        Me.txtCountToA.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCountToA.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCountToA.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtCountToA.Location = New System.Drawing.Point(859, 199)
+        Me.txtCountToA.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtCountToA.Name = "txtCountToA"
+        Me.txtCountToA.Size = New System.Drawing.Size(146, 25)
+        Me.txtCountToA.TabIndex = 33
         '
-        'Label12
+        'lblModule_Average
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.Label12.Location = New System.Drawing.Point(598, 301)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(155, 25)
-        Me.Label12.TabIndex = 32
-        Me.Label12.Text = "Module Average"
+        Me.lblModule_Average.AutoSize = True
+        Me.lblModule_Average.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblModule_Average.Location = New System.Drawing.Point(598, 301)
+        Me.lblModule_Average.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblModule_Average.Name = "lblModule_Average"
+        Me.lblModule_Average.Size = New System.Drawing.Size(155, 25)
+        Me.lblModule_Average.TabIndex = 32
+        Me.lblModule_Average.Text = "Module Average"
         '
-        'Label13
+        'lblCountF
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.Label13.Location = New System.Drawing.Point(599, 253)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(104, 25)
-        Me.Label13.TabIndex = 31
-        Me.Label13.Text = "Count to F"
+        Me.lblCountF.AutoSize = True
+        Me.lblCountF.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblCountF.Location = New System.Drawing.Point(599, 253)
+        Me.lblCountF.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCountF.Name = "lblCountF"
+        Me.lblCountF.Size = New System.Drawing.Size(104, 25)
+        Me.lblCountF.TabIndex = 31
+        Me.lblCountF.Text = "Count to F"
         '
-        'Label14
+        'lblCountA
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.Label14.Location = New System.Drawing.Point(599, 199)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(82, 25)
-        Me.Label14.TabIndex = 30
-        Me.Label14.Text = "Count A"
+        Me.lblCountA.AutoSize = True
+        Me.lblCountA.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblCountA.Location = New System.Drawing.Point(599, 199)
+        Me.lblCountA.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCountA.Name = "lblCountA"
+        Me.lblCountA.Size = New System.Drawing.Size(106, 25)
+        Me.lblCountA.TabIndex = 30
+        Me.lblCountA.Text = "Count to A"
         '
-        'Label15
+        'lblNoStudents
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Neo Sans", 15.0!)
-        Me.Label15.Location = New System.Drawing.Point(599, 143)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(193, 25)
-        Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Number Of Students"
+        Me.lblNoStudents.AutoSize = True
+        Me.lblNoStudents.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblNoStudents.Location = New System.Drawing.Point(599, 143)
+        Me.lblNoStudents.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblNoStudents.Name = "lblNoStudents"
+        Me.lblNoStudents.Size = New System.Drawing.Size(193, 25)
+        Me.lblNoStudents.TabIndex = 29
+        Me.lblNoStudents.Text = "Number Of Students"
         '
         'Panel1
         '
@@ -464,16 +464,16 @@ Partial Class frmCalculator
         Me.Panel2.Size = New System.Drawing.Size(1086, 18)
         Me.Panel2.TabIndex = 38
         '
-        'Button1
+        'btnShowStats
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(704, 396)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(261, 30)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Show Statistic"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnShowStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowStats.ForeColor = System.Drawing.Color.White
+        Me.btnShowStats.Location = New System.Drawing.Point(704, 396)
+        Me.btnShowStats.Name = "btnShowStats"
+        Me.btnShowStats.Size = New System.Drawing.Size(261, 30)
+        Me.btnShowStats.TabIndex = 39
+        Me.btnShowStats.Text = "Show Statistic"
+        Me.btnShowStats.UseVisualStyleBackColor = True
         '
         'frmCalculator
         '
@@ -481,40 +481,40 @@ Partial Class frmCalculator
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1392, 761)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnShowStats)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.txtCountToF)
+        Me.Controls.Add(Me.txtModule_Average)
+        Me.Controls.Add(Me.txtNoStudents)
+        Me.Controls.Add(Me.txtCountToA)
+        Me.Controls.Add(Me.lblModule_Average)
+        Me.Controls.Add(Me.lblCountF)
+        Me.Controls.Add(Me.lblCountA)
+        Me.Controls.Add(Me.lblNoStudents)
+        Me.Controls.Add(Me.lblHeader3)
+        Me.Controls.Add(Me.lblSubHeader2)
+        Me.Controls.Add(Me.btnConfirm)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lstStudent_Record)
+        Me.Controls.Add(Me.txtModule_Marks)
+        Me.Controls.Add(Me.txtRemarks)
+        Me.Controls.Add(Me.txtCAMark)
+        Me.Controls.Add(Me.txtModule_Grade)
+        Me.Controls.Add(Me.lblRemarks)
+        Me.Controls.Add(Me.lblModule_Marks)
+        Me.Controls.Add(Me.lblModule_Grade)
+        Me.Controls.Add(Me.lblCAmark)
+        Me.Controls.Add(Me.txtProject)
+        Me.Controls.Add(Me.txtExam)
+        Me.Controls.Add(Me.txtTest)
+        Me.Controls.Add(Me.txtQuizzes)
+        Me.Controls.Add(Me.lblExam)
+        Me.Controls.Add(Me.lblProject)
+        Me.Controls.Add(Me.lblTest)
+        Me.Controls.Add(Me.lblQuizzes)
+        Me.Controls.Add(Me.lblSubHeader1)
         Me.Controls.Add(Me.lblHeader2)
         Me.Controls.Add(Me.lblHeader1)
         Me.Controls.Add(Me.txtFullname)
@@ -534,38 +534,38 @@ Partial Class frmCalculator
     Friend WithEvents txtFullname As TextBox
     Friend WithEvents lblHeader1 As Label
     Friend WithEvents lblHeader2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lblSubHeader1 As Label
+    Friend WithEvents lblQuizzes As Label
+    Friend WithEvents lblTest As Label
+    Friend WithEvents lblProject As Label
+    Friend WithEvents lblExam As Label
+    Friend WithEvents txtQuizzes As TextBox
+    Friend WithEvents txtTest As TextBox
+    Friend WithEvents txtExam As TextBox
+    Friend WithEvents txtProject As TextBox
+    Friend WithEvents lblCAmark As Label
+    Friend WithEvents lblModule_Grade As Label
+    Friend WithEvents lblModule_Marks As Label
+    Friend WithEvents lblRemarks As Label
+    Friend WithEvents txtModule_Marks As TextBox
+    Friend WithEvents txtRemarks As TextBox
+    Friend WithEvents txtCAMark As TextBox
+    Friend WithEvents txtModule_Grade As TextBox
+    Friend WithEvents lstStudent_Record As ListBox
     Friend WithEvents btnExit As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnConfirm As Button
+    Friend WithEvents lblSubHeader2 As Label
+    Friend WithEvents lblHeader3 As Label
+    Friend WithEvents txtCountToF As TextBox
+    Friend WithEvents txtModule_Average As TextBox
+    Friend WithEvents txtNoStudents As TextBox
+    Friend WithEvents txtCountToA As TextBox
+    Friend WithEvents lblModule_Average As Label
+    Friend WithEvents lblCountF As Label
+    Friend WithEvents lblCountA As Label
+    Friend WithEvents lblNoStudents As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnShowStats As Button
 End Class
