@@ -111,7 +111,7 @@ Partial Class frmCalculator
         '
         Me.lblSubHeader1.AutoSize = True
         Me.lblSubHeader1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblSubHeader1.Location = New System.Drawing.Point(28, 214)
+        Me.lblSubHeader1.Location = New System.Drawing.Point(23, 214)
         Me.lblSubHeader1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader1.Name = "lblSubHeader1"
         Me.lblSubHeader1.Size = New System.Drawing.Size(147, 22)
@@ -210,7 +210,7 @@ Partial Class frmCalculator
         '
         Me.lblCAmark.AutoSize = True
         Me.lblCAmark.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblCAmark.Location = New System.Drawing.Point(305, 260)
+        Me.lblCAmark.Location = New System.Drawing.Point(290, 260)
         Me.lblCAmark.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCAmark.Name = "lblCAmark"
         Me.lblCAmark.Size = New System.Drawing.Size(79, 22)
@@ -221,7 +221,7 @@ Partial Class frmCalculator
         '
         Me.lblModule_Grade.AutoSize = True
         Me.lblModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblModule_Grade.Location = New System.Drawing.Point(305, 291)
+        Me.lblModule_Grade.Location = New System.Drawing.Point(290, 291)
         Me.lblModule_Grade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Grade.Name = "lblModule_Grade"
         Me.lblModule_Grade.Size = New System.Drawing.Size(123, 22)
@@ -232,7 +232,7 @@ Partial Class frmCalculator
         '
         Me.lblModule_Marks.AutoSize = True
         Me.lblModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblModule_Marks.Location = New System.Drawing.Point(305, 323)
+        Me.lblModule_Marks.Location = New System.Drawing.Point(290, 323)
         Me.lblModule_Marks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Marks.Name = "lblModule_Marks"
         Me.lblModule_Marks.Size = New System.Drawing.Size(121, 22)
@@ -243,7 +243,7 @@ Partial Class frmCalculator
         '
         Me.lblRemarks.AutoSize = True
         Me.lblRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblRemarks.Location = New System.Drawing.Point(305, 355)
+        Me.lblRemarks.Location = New System.Drawing.Point(290, 355)
         Me.lblRemarks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRemarks.Name = "lblRemarks"
         Me.lblRemarks.Size = New System.Drawing.Size(81, 22)
@@ -255,7 +255,7 @@ Partial Class frmCalculator
         Me.txtModule_Marks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Marks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtModule_Marks.Location = New System.Drawing.Point(458, 328)
+        Me.txtModule_Marks.Location = New System.Drawing.Point(443, 328)
         Me.txtModule_Marks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Marks.Name = "txtModule_Marks"
         Me.txtModule_Marks.ReadOnly = True
@@ -267,7 +267,7 @@ Partial Class frmCalculator
         Me.txtRemarks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtRemarks.Location = New System.Drawing.Point(458, 359)
+        Me.txtRemarks.Location = New System.Drawing.Point(443, 359)
         Me.txtRemarks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtRemarks.Name = "txtRemarks"
         Me.txtRemarks.ReadOnly = True
@@ -279,7 +279,7 @@ Partial Class frmCalculator
         Me.txtCAMark.BackColor = System.Drawing.Color.RosyBrown
         Me.txtCAMark.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCAMark.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtCAMark.Location = New System.Drawing.Point(458, 264)
+        Me.txtCAMark.Location = New System.Drawing.Point(443, 264)
         Me.txtCAMark.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCAMark.Name = "txtCAMark"
         Me.txtCAMark.ReadOnly = True
@@ -291,7 +291,7 @@ Partial Class frmCalculator
         Me.txtModule_Grade.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Grade.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtModule_Grade.Location = New System.Drawing.Point(458, 296)
+        Me.txtModule_Grade.Location = New System.Drawing.Point(443, 296)
         Me.txtModule_Grade.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Grade.Name = "txtModule_Grade"
         Me.txtModule_Grade.ReadOnly = True
@@ -346,7 +346,7 @@ Partial Class frmCalculator
         '
         Me.lblSubHeader2.AutoSize = True
         Me.lblSubHeader2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblSubHeader2.Location = New System.Drawing.Point(305, 214)
+        Me.lblSubHeader2.Location = New System.Drawing.Point(290, 214)
         Me.lblSubHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader2.Name = "lblSubHeader2"
         Me.lblSubHeader2.Size = New System.Drawing.Size(129, 22)
