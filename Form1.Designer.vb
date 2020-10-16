@@ -69,7 +69,7 @@ Partial Class frmCalculator
         Me.lblName.Location = New System.Drawing.Point(28, 80)
         Me.lblName.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(58, 20)
+        Me.lblName.Size = New System.Drawing.Size(59, 20)
         Me.lblName.TabIndex = 1
         Me.lblName.Text = "Name :"
         '
@@ -77,62 +77,62 @@ Partial Class frmCalculator
         '
         Me.txtFullname.BackColor = System.Drawing.Color.RosyBrown
         Me.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFullname.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtFullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtFullname.Location = New System.Drawing.Point(84, 80)
         Me.txtFullname.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtFullname.Name = "txtFullname"
-        Me.txtFullname.Size = New System.Drawing.Size(261, 17)
+        Me.txtFullname.Size = New System.Drawing.Size(261, 16)
         Me.txtFullname.TabIndex = 2
         '
         'lblHeader1
         '
         Me.lblHeader1.AutoSize = True
-        Me.lblHeader1.Font = New System.Drawing.Font("Neo Sans", 18.0!)
+        Me.lblHeader1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.lblHeader1.ForeColor = System.Drawing.Color.Snow
         Me.lblHeader1.Location = New System.Drawing.Point(27, 31)
         Me.lblHeader1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblHeader1.Name = "lblHeader1"
-        Me.lblHeader1.Size = New System.Drawing.Size(419, 30)
+        Me.lblHeader1.Size = New System.Drawing.Size(434, 29)
         Me.lblHeader1.TabIndex = 3
         Me.lblHeader1.Text = "Marks and Grades For Indiviual Student"
         '
         'lblHeader2
         '
         Me.lblHeader2.AutoSize = True
-        Me.lblHeader2.Font = New System.Drawing.Font("Neo Sans", 18.0!)
+        Me.lblHeader2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.lblHeader2.Location = New System.Drawing.Point(27, 160)
         Me.lblHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHeader2.Name = "lblHeader2"
-        Me.lblHeader2.Size = New System.Drawing.Size(265, 30)
+        Me.lblHeader2.Size = New System.Drawing.Size(274, 29)
         Me.lblHeader2.TabIndex = 4
         Me.lblHeader2.Text = "Input CA and Exam Mark"
         '
         'lblSubHeader1
         '
         Me.lblSubHeader1.AutoSize = True
-        Me.lblSubHeader1.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblSubHeader1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblSubHeader1.Location = New System.Drawing.Point(28, 214)
         Me.lblSubHeader1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader1.Name = "lblSubHeader1"
-        Me.lblSubHeader1.Size = New System.Drawing.Size(139, 22)
+        Me.lblSubHeader1.Size = New System.Drawing.Size(147, 22)
         Me.lblSubHeader1.TabIndex = 5
         Me.lblSubHeader1.Text = "CA Componenet:"
         '
         'lblQuizzes
         '
         Me.lblQuizzes.AutoSize = True
-        Me.lblQuizzes.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblQuizzes.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblQuizzes.Location = New System.Drawing.Point(23, 296)
         Me.lblQuizzes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblQuizzes.Name = "lblQuizzes"
-        Me.lblQuizzes.Size = New System.Drawing.Size(71, 22)
+        Me.lblQuizzes.Size = New System.Drawing.Size(73, 22)
         Me.lblQuizzes.TabIndex = 6
         Me.lblQuizzes.Text = "Quizzes"
         '
         'lblTest
         '
         Me.lblTest.AutoSize = True
-        Me.lblTest.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblTest.Location = New System.Drawing.Point(23, 265)
         Me.lblTest.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTest.Name = "lblTest"
@@ -143,7 +143,7 @@ Partial Class frmCalculator
         'lblProject
         '
         Me.lblProject.AutoSize = True
-        Me.lblProject.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblProject.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblProject.Location = New System.Drawing.Point(23, 328)
         Me.lblProject.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblProject.Name = "lblProject"
@@ -154,11 +154,11 @@ Partial Class frmCalculator
         'lblExam
         '
         Me.lblExam.AutoSize = True
-        Me.lblExam.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblExam.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblExam.Location = New System.Drawing.Point(23, 360)
         Me.lblExam.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblExam.Name = "lblExam"
-        Me.lblExam.Size = New System.Drawing.Size(52, 22)
+        Me.lblExam.Size = New System.Drawing.Size(55, 22)
         Me.lblExam.TabIndex = 9
         Me.lblExam.Text = "Exam"
         '
@@ -166,87 +166,87 @@ Partial Class frmCalculator
         '
         Me.txtQuizzes.BackColor = System.Drawing.Color.RosyBrown
         Me.txtQuizzes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtQuizzes.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtQuizzes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtQuizzes.Location = New System.Drawing.Point(150, 296)
         Me.txtQuizzes.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtQuizzes.Name = "txtQuizzes"
-        Me.txtQuizzes.Size = New System.Drawing.Size(96, 17)
+        Me.txtQuizzes.Size = New System.Drawing.Size(96, 16)
         Me.txtQuizzes.TabIndex = 10
         '
         'txtTest
         '
         Me.txtTest.BackColor = System.Drawing.Color.RosyBrown
         Me.txtTest.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTest.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtTest.Location = New System.Drawing.Point(150, 265)
         Me.txtTest.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtTest.Name = "txtTest"
-        Me.txtTest.Size = New System.Drawing.Size(96, 17)
+        Me.txtTest.Size = New System.Drawing.Size(96, 16)
         Me.txtTest.TabIndex = 11
         '
         'txtExam
         '
         Me.txtExam.BackColor = System.Drawing.Color.RosyBrown
         Me.txtExam.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtExam.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtExam.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtExam.Location = New System.Drawing.Point(150, 360)
         Me.txtExam.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtExam.Name = "txtExam"
-        Me.txtExam.Size = New System.Drawing.Size(96, 17)
+        Me.txtExam.Size = New System.Drawing.Size(96, 16)
         Me.txtExam.TabIndex = 12
         '
         'txtProject
         '
         Me.txtProject.BackColor = System.Drawing.Color.RosyBrown
         Me.txtProject.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtProject.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtProject.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtProject.Location = New System.Drawing.Point(150, 328)
         Me.txtProject.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtProject.Name = "txtProject"
-        Me.txtProject.Size = New System.Drawing.Size(96, 17)
+        Me.txtProject.Size = New System.Drawing.Size(96, 16)
         Me.txtProject.TabIndex = 13
         '
         'lblCAmark
         '
         Me.lblCAmark.AutoSize = True
-        Me.lblCAmark.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblCAmark.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblCAmark.Location = New System.Drawing.Point(305, 260)
         Me.lblCAmark.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCAmark.Name = "lblCAmark"
-        Me.lblCAmark.Size = New System.Drawing.Size(73, 22)
+        Me.lblCAmark.Size = New System.Drawing.Size(79, 22)
         Me.lblCAmark.TabIndex = 14
         Me.lblCAmark.Text = "CA Mark"
         '
         'lblModule_Grade
         '
         Me.lblModule_Grade.AutoSize = True
-        Me.lblModule_Grade.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblModule_Grade.Location = New System.Drawing.Point(305, 291)
         Me.lblModule_Grade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Grade.Name = "lblModule_Grade"
-        Me.lblModule_Grade.Size = New System.Drawing.Size(118, 22)
+        Me.lblModule_Grade.Size = New System.Drawing.Size(123, 22)
         Me.lblModule_Grade.TabIndex = 15
         Me.lblModule_Grade.Text = "Module Grade"
         '
         'lblModule_Marks
         '
         Me.lblModule_Marks.AutoSize = True
-        Me.lblModule_Marks.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblModule_Marks.Location = New System.Drawing.Point(305, 323)
         Me.lblModule_Marks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Marks.Name = "lblModule_Marks"
-        Me.lblModule_Marks.Size = New System.Drawing.Size(118, 22)
+        Me.lblModule_Marks.Size = New System.Drawing.Size(121, 22)
         Me.lblModule_Marks.TabIndex = 16
         Me.lblModule_Marks.Text = "Module Marks"
         '
         'lblRemarks
         '
         Me.lblRemarks.AutoSize = True
-        Me.lblRemarks.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblRemarks.Location = New System.Drawing.Point(305, 355)
         Me.lblRemarks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRemarks.Name = "lblRemarks"
-        Me.lblRemarks.Size = New System.Drawing.Size(76, 22)
+        Me.lblRemarks.Size = New System.Drawing.Size(81, 22)
         Me.lblRemarks.TabIndex = 17
         Me.lblRemarks.Text = "Remarks"
         '
@@ -254,44 +254,48 @@ Partial Class frmCalculator
         '
         Me.txtModule_Marks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Marks.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtModule_Marks.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtModule_Marks.Location = New System.Drawing.Point(458, 328)
         Me.txtModule_Marks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Marks.Name = "txtModule_Marks"
-        Me.txtModule_Marks.Size = New System.Drawing.Size(96, 17)
+        Me.txtModule_Marks.ReadOnly = True
+        Me.txtModule_Marks.Size = New System.Drawing.Size(96, 16)
         Me.txtModule_Marks.TabIndex = 21
         '
         'txtRemarks
         '
         Me.txtRemarks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtRemarks.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtRemarks.Location = New System.Drawing.Point(458, 359)
         Me.txtRemarks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtRemarks.Name = "txtRemarks"
-        Me.txtRemarks.Size = New System.Drawing.Size(96, 17)
+        Me.txtRemarks.ReadOnly = True
+        Me.txtRemarks.Size = New System.Drawing.Size(96, 16)
         Me.txtRemarks.TabIndex = 20
         '
         'txtCAMark
         '
         Me.txtCAMark.BackColor = System.Drawing.Color.RosyBrown
         Me.txtCAMark.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCAMark.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtCAMark.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtCAMark.Location = New System.Drawing.Point(458, 264)
         Me.txtCAMark.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCAMark.Name = "txtCAMark"
-        Me.txtCAMark.Size = New System.Drawing.Size(96, 17)
+        Me.txtCAMark.ReadOnly = True
+        Me.txtCAMark.Size = New System.Drawing.Size(96, 16)
         Me.txtCAMark.TabIndex = 19
         '
         'txtModule_Grade
         '
         Me.txtModule_Grade.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Grade.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtModule_Grade.Font = New System.Drawing.Font("Neo Sans", 10.0!)
+        Me.txtModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtModule_Grade.Location = New System.Drawing.Point(458, 296)
         Me.txtModule_Grade.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Grade.Name = "txtModule_Grade"
-        Me.txtModule_Grade.Size = New System.Drawing.Size(96, 17)
+        Me.txtModule_Grade.ReadOnly = True
+        Me.txtModule_Grade.Size = New System.Drawing.Size(96, 16)
         Me.txtModule_Grade.TabIndex = 18
         '
         'lstStudent_Record
@@ -341,22 +345,22 @@ Partial Class frmCalculator
         'lblSubHeader2
         '
         Me.lblSubHeader2.AutoSize = True
-        Me.lblSubHeader2.Font = New System.Drawing.Font("Neo Sans", 13.0!)
+        Me.lblSubHeader2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.lblSubHeader2.Location = New System.Drawing.Point(305, 214)
         Me.lblSubHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader2.Name = "lblSubHeader2"
-        Me.lblSubHeader2.Size = New System.Drawing.Size(126, 22)
+        Me.lblSubHeader2.Size = New System.Drawing.Size(129, 22)
         Me.lblSubHeader2.TabIndex = 26
         Me.lblSubHeader2.Text = "Module Result:"
         '
         'lblHeader3
         '
         Me.lblHeader3.AutoSize = True
-        Me.lblHeader3.Font = New System.Drawing.Font("Neo Sans", 18.0!)
+        Me.lblHeader3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.lblHeader3.Location = New System.Drawing.Point(599, 31)
         Me.lblHeader3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHeader3.Name = "lblHeader3"
-        Me.lblHeader3.Size = New System.Drawing.Size(181, 30)
+        Me.lblHeader3.Size = New System.Drawing.Size(183, 29)
         Me.lblHeader3.TabIndex = 28
         Me.lblHeader3.Text = "Module Statistic"
         '
@@ -364,87 +368,91 @@ Partial Class frmCalculator
         '
         Me.txtCountToF.BackColor = System.Drawing.Color.RosyBrown
         Me.txtCountToF.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCountToF.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtCountToF.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtCountToF.Location = New System.Drawing.Point(859, 250)
         Me.txtCountToF.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCountToF.Name = "txtCountToF"
-        Me.txtCountToF.Size = New System.Drawing.Size(146, 25)
+        Me.txtCountToF.ReadOnly = True
+        Me.txtCountToF.Size = New System.Drawing.Size(146, 23)
         Me.txtCountToF.TabIndex = 36
         '
         'txtModule_Average
         '
         Me.txtModule_Average.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Average.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtModule_Average.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtModule_Average.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtModule_Average.Location = New System.Drawing.Point(859, 301)
         Me.txtModule_Average.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Average.Name = "txtModule_Average"
-        Me.txtModule_Average.Size = New System.Drawing.Size(146, 25)
+        Me.txtModule_Average.ReadOnly = True
+        Me.txtModule_Average.Size = New System.Drawing.Size(146, 23)
         Me.txtModule_Average.TabIndex = 35
         '
         'txtNoStudents
         '
         Me.txtNoStudents.BackColor = System.Drawing.Color.RosyBrown
         Me.txtNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNoStudents.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtNoStudents.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtNoStudents.Location = New System.Drawing.Point(859, 143)
         Me.txtNoStudents.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtNoStudents.Name = "txtNoStudents"
-        Me.txtNoStudents.Size = New System.Drawing.Size(146, 25)
+        Me.txtNoStudents.ReadOnly = True
+        Me.txtNoStudents.Size = New System.Drawing.Size(146, 23)
         Me.txtNoStudents.TabIndex = 34
         '
         'txtCountToA
         '
         Me.txtCountToA.BackColor = System.Drawing.Color.RosyBrown
         Me.txtCountToA.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCountToA.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.txtCountToA.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtCountToA.Location = New System.Drawing.Point(859, 199)
         Me.txtCountToA.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCountToA.Name = "txtCountToA"
-        Me.txtCountToA.Size = New System.Drawing.Size(146, 25)
+        Me.txtCountToA.ReadOnly = True
+        Me.txtCountToA.Size = New System.Drawing.Size(146, 23)
         Me.txtCountToA.TabIndex = 33
         '
         'lblModule_Average
         '
         Me.lblModule_Average.AutoSize = True
-        Me.lblModule_Average.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblModule_Average.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.lblModule_Average.Location = New System.Drawing.Point(598, 301)
         Me.lblModule_Average.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Average.Name = "lblModule_Average"
-        Me.lblModule_Average.Size = New System.Drawing.Size(155, 25)
+        Me.lblModule_Average.Size = New System.Drawing.Size(156, 25)
         Me.lblModule_Average.TabIndex = 32
         Me.lblModule_Average.Text = "Module Average"
         '
         'lblCountF
         '
         Me.lblCountF.AutoSize = True
-        Me.lblCountF.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblCountF.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.lblCountF.Location = New System.Drawing.Point(599, 253)
         Me.lblCountF.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCountF.Name = "lblCountF"
-        Me.lblCountF.Size = New System.Drawing.Size(104, 25)
+        Me.lblCountF.Size = New System.Drawing.Size(103, 25)
         Me.lblCountF.TabIndex = 31
         Me.lblCountF.Text = "Count to F"
         '
         'lblCountA
         '
         Me.lblCountA.AutoSize = True
-        Me.lblCountA.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblCountA.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.lblCountA.Location = New System.Drawing.Point(599, 199)
         Me.lblCountA.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCountA.Name = "lblCountA"
-        Me.lblCountA.Size = New System.Drawing.Size(106, 25)
+        Me.lblCountA.Size = New System.Drawing.Size(105, 25)
         Me.lblCountA.TabIndex = 30
         Me.lblCountA.Text = "Count to A"
         '
         'lblNoStudents
         '
         Me.lblNoStudents.AutoSize = True
-        Me.lblNoStudents.Font = New System.Drawing.Font("Neo Sans", 15.0!)
+        Me.lblNoStudents.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.lblNoStudents.Location = New System.Drawing.Point(599, 143)
         Me.lblNoStudents.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNoStudents.Name = "lblNoStudents"
-        Me.lblNoStudents.Size = New System.Drawing.Size(193, 25)
+        Me.lblNoStudents.Size = New System.Drawing.Size(190, 25)
         Me.lblNoStudents.TabIndex = 29
         Me.lblNoStudents.Text = "Number Of Students"
         '
@@ -519,7 +527,7 @@ Partial Class frmCalculator
         Me.Controls.Add(Me.lblHeader1)
         Me.Controls.Add(Me.txtFullname)
         Me.Controls.Add(Me.lblName)
-        Me.Font = New System.Drawing.Font("Neo Sans", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ForeColor = System.Drawing.Color.Snow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
