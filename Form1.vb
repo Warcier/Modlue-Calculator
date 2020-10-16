@@ -1,5 +1,6 @@
 ﻿Public Class frmCalculator
     Private alert As MsgBoxResult
+    Public Property Error_PopUp As MsgBoxResult
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -11,19 +12,55 @@
         Me.Close()
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        Console.WriteLine()
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click 'Class btn for removing the text box
+        txtModule_Grade.Text = ""
+        txtModule_Marks.Text = ""
+        txtCAMark.Text = ""
+        txtRemarks.Text = ""
+        txtTest.Text = ""
+        txtQuizzes.Text = ""
+        txtProject.Text = ""
+        txtExam.Text = ""
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
 
-        Dim Test, Quizzes, Project, Exam As Integer
+        Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_Var As Integer
+        Dim alert As String = "Error"
 
         Test = CDbl(EmptyCheck(txtTest.Text))
         Quizzes = CDbl(EmptyCheck(txtQuizzes.Text))
         Project = CDbl(EmptyCheck(txtProject.Text))
 
         txtCAMark.Text = CStr(CA_Mark(Test, Project, Quizzes))
+
+        CAScore_Var = txtCAMark.Text
+        Exam = CDbl(EmptyCheck(txtExam.Text))
+        txtModule_Marks.Text = CStr(Module_Mark(CAScore_Var, Exam))
+        Module_Var = txtModule_Marks.Text
+
+
+        If CAScore_Var < 40 Or Exam < 40 Then
+            txtModule_Grade.Text = "F"
+        ElseIf CAScore_Var >= 40 Or Exam >= 40 Then
+            If Module_Var >= 75 And Module_Var <= 100 Then
+                txtModule_Grade.Text = "A"
+            ElseIf Module_Var < 75 And Module_Var >= 65 Then
+                txtModule_Grade.Text = "B"
+            ElseIf Module_Var < 65 And Module_Var >= 40 Then
+                txtModule_Grade.Text = "C"
+            End If
+        Else
+            MsgBox("Error", MsgBoxStyle.Information, alert)
+        End If
+
+        If txtModule_Grade.Text = "A" Or txtModule_Grade.Text = "B" Or txtModule_Grade.Text = "C" Then
+            txtRemarks.Text = "Pass"
+        ElseIf txtModule_Grade.Text = "F" And Module_Var < 30 Then
+            txtRemarks.Text = "Resit Exam"
+        ElseIf txtModule_Grade.Text = "F" And Module_Var >= 30 Then
+            txtRemarks.Text = "Restudy"
+        End If
 
     End Sub
 
@@ -32,33 +69,54 @@
     End Sub
     '///////////////////////////////////
 
+    '///////////////////////////////////
+
     'Function For CA Mark Calculation
-    Public Function CA_Mark(ByVal Test As Double, ByVal Project As Double, ByVal Quizzes As Double) As Double
-        Dim CA, Final As Double
+    Public Function CA_Mark(ByVal Test As Double, ByVal Project As Double, ByVal Quizzes As Double) As Integer
+
+
+        Dim CA As Double
         Const TEST_PERCENTAGE As Double = 0.5
         Const TEST_PROJECT As Double = 0.3
         Const TEST_QUIZZES As Double = 0.2
+
         Dim Alert As String = "Error"
 
         If Test >= 0 And Test <= 100 AndAlso Project >= 0 And Project <= 100 AndAlso Quizzes >= 0 And Quizzes <= 100 Then
 
             CA = Test * TEST_PERCENTAGE + Project * TEST_PROJECT + Quizzes * TEST_QUIZZES
+            Return CA
 
         Else
-            MsgBox("Please input 0 to 100 only", MsgBoxStyle.Information, Alert)
+            Error_PopUp = MsgBox("Please input 0 to 100 only", MsgBoxStyle.Information, Alert)
+            Return 0
         End If
-
-        Return CA
 
     End Function
 
+    'Function For Module Mark
+    Public Function Module_Mark(ByVal CAMark As Double, ByVal Exam_Mark As Double) As Integer
+        Dim ModuleMark As Double
+        Const TEST_CAMark As Double = 0.4
+        Const TEST_Exam_Mark As Double = 0.6
+
+        ModuleMark = CAMark * TEST_CAMark + Exam_Mark * TEST_Exam_Mark
+        Return ModuleMark
+
+
+    End Function
+
+    'Function to Check empty text box
     Function EmptyCheck(ByVal text As String)
         If text = "" Then
-            alert = MsgBox("Please input every Box", MsgBoxStyle.Information, "Error")
+            Return MsgBox("Please input every Box", MsgBoxStyle.Information, "Error")
+        Else
+            Return text
         End If
-        Return alert
+
     End Function
 
+    '///////////////////////////////////
 End Class
 
 

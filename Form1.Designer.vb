@@ -100,7 +100,7 @@ Partial Class frmCalculator
         '
         Me.lblHeader2.AutoSize = True
         Me.lblHeader2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.lblHeader2.Location = New System.Drawing.Point(27, 160)
+        Me.lblHeader2.Location = New System.Drawing.Point(27, 111)
         Me.lblHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHeader2.Name = "lblHeader2"
         Me.lblHeader2.Size = New System.Drawing.Size(274, 29)
@@ -111,7 +111,7 @@ Partial Class frmCalculator
         '
         Me.lblSubHeader1.AutoSize = True
         Me.lblSubHeader1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblSubHeader1.Location = New System.Drawing.Point(23, 214)
+        Me.lblSubHeader1.Location = New System.Drawing.Point(23, 165)
         Me.lblSubHeader1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader1.Name = "lblSubHeader1"
         Me.lblSubHeader1.Size = New System.Drawing.Size(147, 22)
@@ -122,7 +122,7 @@ Partial Class frmCalculator
         '
         Me.lblQuizzes.AutoSize = True
         Me.lblQuizzes.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblQuizzes.Location = New System.Drawing.Point(23, 296)
+        Me.lblQuizzes.Location = New System.Drawing.Point(23, 247)
         Me.lblQuizzes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblQuizzes.Name = "lblQuizzes"
         Me.lblQuizzes.Size = New System.Drawing.Size(73, 22)
@@ -133,7 +133,7 @@ Partial Class frmCalculator
         '
         Me.lblTest.AutoSize = True
         Me.lblTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblTest.Location = New System.Drawing.Point(23, 265)
+        Me.lblTest.Location = New System.Drawing.Point(23, 216)
         Me.lblTest.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTest.Name = "lblTest"
         Me.lblTest.Size = New System.Drawing.Size(46, 22)
@@ -144,7 +144,7 @@ Partial Class frmCalculator
         '
         Me.lblProject.AutoSize = True
         Me.lblProject.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblProject.Location = New System.Drawing.Point(23, 328)
+        Me.lblProject.Location = New System.Drawing.Point(23, 279)
         Me.lblProject.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblProject.Name = "lblProject"
         Me.lblProject.Size = New System.Drawing.Size(66, 22)
@@ -155,7 +155,7 @@ Partial Class frmCalculator
         '
         Me.lblExam.AutoSize = True
         Me.lblExam.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblExam.Location = New System.Drawing.Point(23, 360)
+        Me.lblExam.Location = New System.Drawing.Point(23, 311)
         Me.lblExam.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblExam.Name = "lblExam"
         Me.lblExam.Size = New System.Drawing.Size(55, 22)
@@ -167,7 +167,7 @@ Partial Class frmCalculator
         Me.txtQuizzes.BackColor = System.Drawing.Color.RosyBrown
         Me.txtQuizzes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtQuizzes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtQuizzes.Location = New System.Drawing.Point(150, 296)
+        Me.txtQuizzes.Location = New System.Drawing.Point(150, 247)
         Me.txtQuizzes.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtQuizzes.Name = "txtQuizzes"
         Me.txtQuizzes.Size = New System.Drawing.Size(96, 16)
@@ -178,7 +178,7 @@ Partial Class frmCalculator
         Me.txtTest.BackColor = System.Drawing.Color.RosyBrown
         Me.txtTest.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtTest.Location = New System.Drawing.Point(150, 265)
+        Me.txtTest.Location = New System.Drawing.Point(150, 216)
         Me.txtTest.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtTest.Name = "txtTest"
         Me.txtTest.Size = New System.Drawing.Size(96, 16)
@@ -189,7 +189,7 @@ Partial Class frmCalculator
         Me.txtExam.BackColor = System.Drawing.Color.RosyBrown
         Me.txtExam.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtExam.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtExam.Location = New System.Drawing.Point(150, 360)
+        Me.txtExam.Location = New System.Drawing.Point(150, 311)
         Me.txtExam.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtExam.Name = "txtExam"
         Me.txtExam.Size = New System.Drawing.Size(96, 16)
@@ -200,7 +200,7 @@ Partial Class frmCalculator
         Me.txtProject.BackColor = System.Drawing.Color.RosyBrown
         Me.txtProject.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProject.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtProject.Location = New System.Drawing.Point(150, 328)
+        Me.txtProject.Location = New System.Drawing.Point(150, 279)
         Me.txtProject.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtProject.Name = "txtProject"
         Me.txtProject.Size = New System.Drawing.Size(96, 16)
@@ -210,7 +210,7 @@ Partial Class frmCalculator
         '
         Me.lblCAmark.AutoSize = True
         Me.lblCAmark.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblCAmark.Location = New System.Drawing.Point(290, 260)
+        Me.lblCAmark.Location = New System.Drawing.Point(290, 211)
         Me.lblCAmark.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCAmark.Name = "lblCAmark"
         Me.lblCAmark.Size = New System.Drawing.Size(79, 22)
@@ -221,7 +221,7 @@ Partial Class frmCalculator
         '
         Me.lblModule_Grade.AutoSize = True
         Me.lblModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblModule_Grade.Location = New System.Drawing.Point(290, 291)
+        Me.lblModule_Grade.Location = New System.Drawing.Point(290, 242)
         Me.lblModule_Grade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Grade.Name = "lblModule_Grade"
         Me.lblModule_Grade.Size = New System.Drawing.Size(123, 22)
@@ -232,7 +232,7 @@ Partial Class frmCalculator
         '
         Me.lblModule_Marks.AutoSize = True
         Me.lblModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblModule_Marks.Location = New System.Drawing.Point(290, 323)
+        Me.lblModule_Marks.Location = New System.Drawing.Point(290, 274)
         Me.lblModule_Marks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblModule_Marks.Name = "lblModule_Marks"
         Me.lblModule_Marks.Size = New System.Drawing.Size(121, 22)
@@ -243,7 +243,7 @@ Partial Class frmCalculator
         '
         Me.lblRemarks.AutoSize = True
         Me.lblRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblRemarks.Location = New System.Drawing.Point(290, 355)
+        Me.lblRemarks.Location = New System.Drawing.Point(290, 306)
         Me.lblRemarks.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRemarks.Name = "lblRemarks"
         Me.lblRemarks.Size = New System.Drawing.Size(81, 22)
@@ -255,7 +255,7 @@ Partial Class frmCalculator
         Me.txtModule_Marks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Marks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtModule_Marks.Location = New System.Drawing.Point(443, 328)
+        Me.txtModule_Marks.Location = New System.Drawing.Point(443, 279)
         Me.txtModule_Marks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Marks.Name = "txtModule_Marks"
         Me.txtModule_Marks.ReadOnly = True
@@ -267,7 +267,7 @@ Partial Class frmCalculator
         Me.txtRemarks.BackColor = System.Drawing.Color.RosyBrown
         Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtRemarks.Location = New System.Drawing.Point(443, 359)
+        Me.txtRemarks.Location = New System.Drawing.Point(443, 310)
         Me.txtRemarks.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtRemarks.Name = "txtRemarks"
         Me.txtRemarks.ReadOnly = True
@@ -279,7 +279,7 @@ Partial Class frmCalculator
         Me.txtCAMark.BackColor = System.Drawing.Color.RosyBrown
         Me.txtCAMark.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCAMark.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtCAMark.Location = New System.Drawing.Point(443, 264)
+        Me.txtCAMark.Location = New System.Drawing.Point(443, 215)
         Me.txtCAMark.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCAMark.Name = "txtCAMark"
         Me.txtCAMark.ReadOnly = True
@@ -291,7 +291,7 @@ Partial Class frmCalculator
         Me.txtModule_Grade.BackColor = System.Drawing.Color.RosyBrown
         Me.txtModule_Grade.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.txtModule_Grade.Location = New System.Drawing.Point(443, 296)
+        Me.txtModule_Grade.Location = New System.Drawing.Point(443, 247)
         Me.txtModule_Grade.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtModule_Grade.Name = "txtModule_Grade"
         Me.txtModule_Grade.ReadOnly = True
@@ -313,9 +313,9 @@ Partial Class frmCalculator
         '
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(1085, 698)
+        Me.btnExit.Location = New System.Drawing.Point(1085, 694)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(307, 62)
+        Me.btnExit.Size = New System.Drawing.Size(307, 55)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -324,9 +324,9 @@ Partial Class frmCalculator
         '
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Location = New System.Drawing.Point(84, 104)
+        Me.btnClear.Location = New System.Drawing.Point(177, 396)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(261, 30)
+        Me.btnClear.Size = New System.Drawing.Size(204, 30)
         Me.btnClear.TabIndex = 24
         Me.btnClear.Text = "Clear All"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -335,7 +335,7 @@ Partial Class frmCalculator
         '
         Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirm.ForeColor = System.Drawing.Color.White
-        Me.btnConfirm.Location = New System.Drawing.Point(177, 395)
+        Me.btnConfirm.Location = New System.Drawing.Point(177, 359)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(204, 31)
         Me.btnConfirm.TabIndex = 25
@@ -346,7 +346,7 @@ Partial Class frmCalculator
         '
         Me.lblSubHeader2.AutoSize = True
         Me.lblSubHeader2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblSubHeader2.Location = New System.Drawing.Point(290, 214)
+        Me.lblSubHeader2.Location = New System.Drawing.Point(290, 165)
         Me.lblSubHeader2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubHeader2.Name = "lblSubHeader2"
         Me.lblSubHeader2.Size = New System.Drawing.Size(129, 22)
@@ -488,7 +488,7 @@ Partial Class frmCalculator
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1392, 761)
+        Me.ClientSize = New System.Drawing.Size(1392, 749)
         Me.Controls.Add(Me.btnShowStats)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
