@@ -2,6 +2,12 @@
     Private alert As MsgBoxResult
     Public Property Error_PopUp As MsgBoxResult
 
+    Const TEST_PERCENTAGE As Double = 0.5
+    Const TEST_PROJECT As Double = 0.3
+    Const TEST_QUIZZES As Double = 0.2
+    Const TEST_CAMark As Double = 0.4
+    Const TEST_Exam_Mark As Double = 0.6
+
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -13,20 +19,15 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click 'Class btn for removing the text box
-        txtModule_Grade.Text = ""
-        txtModule_Marks.Text = ""
-        txtCAMark.Text = ""
-        txtRemarks.Text = ""
-        txtTest.Text = ""
-        txtQuizzes.Text = ""
-        txtProject.Text = ""
-        txtExam.Text = ""
+        ClearTextBox()
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
 
         Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_Var As Integer
         Dim alert As String = "Error"
+
+        Name = txtFullname.Text
 
         Test = CDbl(EmptyCheck(txtTest.Text))
         Quizzes = CDbl(EmptyCheck(txtQuizzes.Text))
@@ -62,6 +63,14 @@
             txtRemarks.Text = "Restudy"
         End If
 
+        'Dim Remark As String
+        'Dim MGrade As String
+        'Remark = txtRemarks.Text
+        'MGrade = txtModule_Grade.Text
+
+        AddRecord(Name)
+
+
     End Sub
 
     Private Sub btnShowStats_Click(sender As Object, e As EventArgs) Handles btnShowStats.Click
@@ -76,9 +85,7 @@
 
 
         Dim CA As Double
-        Const TEST_PERCENTAGE As Double = 0.5
-        Const TEST_PROJECT As Double = 0.3
-        Const TEST_QUIZZES As Double = 0.2
+
 
         Dim Alert As String = "Error"
 
@@ -97,8 +104,7 @@
     'Function For Module Mark
     Public Function Module_Mark(ByVal CAMark As Double, ByVal Exam_Mark As Double) As Integer
         Dim ModuleMark As Double
-        Const TEST_CAMark As Double = 0.4
-        Const TEST_Exam_Mark As Double = 0.6
+
 
         ModuleMark = CAMark * TEST_CAMark + Exam_Mark * TEST_Exam_Mark
         Return ModuleMark
@@ -116,8 +122,25 @@
 
     End Function
 
+    Public Sub ClearTextBox()
+        txtModule_Grade.Clear()
+        txtModule_Marks.Clear()
+        txtCAMark.Clear()
+        txtRemarks.Clear()
+        txtTest.Clear()
+        txtQuizzes.Clear()
+        txtProject.Clear()
+        txtExam.Clear()
+    End Sub
+
+    Sub AddRecord(ByVal Name As String)
+        lstStudent_Record.Items.Add(Name)
+    End Sub
+
     '///////////////////////////////////
 End Class
+
+
 
 
 
