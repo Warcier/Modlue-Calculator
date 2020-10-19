@@ -60,6 +60,8 @@ Partial Class frmCalculator
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnShowStats = New System.Windows.Forms.Button()
+        Me.txtNameFinder = New System.Windows.Forms.TextBox()
+        Me.btnFind = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblName
@@ -313,9 +315,9 @@ Partial Class frmCalculator
         '
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(1085, 694)
+        Me.btnExit.Location = New System.Drawing.Point(787, -2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(307, 55)
+        Me.btnExit.Size = New System.Drawing.Size(299, 48)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -483,12 +485,37 @@ Partial Class frmCalculator
         Me.btnShowStats.Text = "Show Statistic"
         Me.btnShowStats.UseVisualStyleBackColor = True
         '
+        'txtNameFinder
+        '
+        Me.txtNameFinder.BackColor = System.Drawing.Color.LightCoral
+        Me.txtNameFinder.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNameFinder.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.txtNameFinder.Location = New System.Drawing.Point(1085, 675)
+        Me.txtNameFinder.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtNameFinder.Name = "txtNameFinder"
+        Me.txtNameFinder.Size = New System.Drawing.Size(307, 23)
+        Me.txtNameFinder.TabIndex = 40
+        '
+        'btnFind
+        '
+        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFind.ForeColor = System.Drawing.Color.White
+        Me.btnFind.Location = New System.Drawing.Point(1085, 692)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(307, 45)
+        Me.btnFind.TabIndex = 41
+        Me.btnFind.Text = "Find"
+        Me.btnFind.UseVisualStyleBackColor = True
+        '
         'frmCalculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1392, 749)
+        Me.ClientSize = New System.Drawing.Size(1392, 737)
+        Me.Controls.Add(Me.btnFind)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.txtNameFinder)
         Me.Controls.Add(Me.btnShowStats)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -504,7 +531,6 @@ Partial Class frmCalculator
         Me.Controls.Add(Me.lblSubHeader2)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.btnClear)
-        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lstStudent_Record)
         Me.Controls.Add(Me.txtModule_Marks)
         Me.Controls.Add(Me.txtRemarks)
@@ -576,4 +602,6 @@ Partial Class frmCalculator
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnShowStats As Button
+    Friend WithEvents txtNameFinder As TextBox
+    Friend WithEvents btnFind As Button
 End Class
