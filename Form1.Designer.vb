@@ -315,9 +315,9 @@ Partial Class frmCalculator
         '
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(787, -2)
+        Me.btnExit.Location = New System.Drawing.Point(787, 692)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(299, 48)
+        Me.btnExit.Size = New System.Drawing.Size(299, 45)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
