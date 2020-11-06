@@ -1,7 +1,11 @@
 ﻿Public Class frmCalculator
 
     'Initializing Class From CalculatorClass.vb
-    Dim CALCULATOR = New CalculatorClass
+    Dim CALCULATOR As New CalculatorClass
+    Dim Result As New Result
+    Dim CountA As Integer
+    Dim CountF As Integer
+    Dim moduleAverage As Double
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -22,6 +26,7 @@
         Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_M As Integer
         Dim alert As String = "Error"
 
+
         Name = txtFullname.Text
         lstStudent_Record.Items.Add(Name)
 
@@ -31,11 +36,11 @@
 
         txtCAMark.Text = CStr(CALCULATOR.CA_Mark(Test, Project, Quizzes))
 
-        'CA Mark
-        CAScore_Var = txtCAMark.Text
-
         'Exam Mark
         Exam = CInt(CALCULATOR.EmptyCheck(txtExam.Text))
+
+        'CA Mark
+        CAScore_Var = txtCAMark.Text
 
         'Moudle Mark
         txtModule_Marks.Text = CStr(CALCULATOR.Module_Mark(CAScore_Var, Exam))
@@ -47,14 +52,25 @@
         'Remarks
         txtRemarks.Text = CALCULATOR.Remark(Module_M, CALCULATOR.Module_Grade(CAScore_Var, Exam, Module_M))
 
+        'Add 1 to Count A Or F 
+        If txtModule_Grade.Text = Result.A() Then
+            CountA += 1
+        ElseIf txtModule_Grade.Text = Result.F() Then
+            CountF += 1
+        End If
 
+        Module_M += Module_M
+        moduleAverage = Module_M / lstStudent_Record.Items.Count()
 
 
 
     End Sub
 
     Private Sub btnShowStats_Click(sender As Object, e As EventArgs) Handles btnShowStats.Click
-
+        txtCountToA.Text = CountA
+        txtCountToF.Text = CountF
+        txtModule_Average.Text = CStr(Math.Round(moduleAverage, 2))
+        txtNoStudents.Text = lstStudent_Record.Items.Count()
     End Sub
 
     'Find Student Name
@@ -73,6 +89,10 @@
         If n = -1 Then
             MessageBox.Show(txtNameFinder.Text & " not found")
         End If
+    End Sub
+
+    Private Sub txtNameFinder_TextChanged(sender As Object, e As EventArgs) Handles txtNameFinder.TextChanged
+
     End Sub
 
 
@@ -201,7 +221,7 @@ Public Class CalculatorClass
 End Class
 
 'GET for the Module Result
-Friend Class Result
+Public Class Result
 
     Public Function Pass() As String
         Return "Pass"

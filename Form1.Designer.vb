@@ -308,7 +308,7 @@ Partial Class frmCalculator
         Me.lstStudent_Record.ItemHeight = 20
         Me.lstStudent_Record.Location = New System.Drawing.Point(1085, -2)
         Me.lstStudent_Record.Name = "lstStudent_Record"
-        Me.lstStudent_Record.Size = New System.Drawing.Size(307, 700)
+        Me.lstStudent_Record.Size = New System.Drawing.Size(307, 680)
         Me.lstStudent_Record.TabIndex = 22
         '
         'btnExit
@@ -490,7 +490,7 @@ Partial Class frmCalculator
         Me.txtNameFinder.BackColor = System.Drawing.Color.LightCoral
         Me.txtNameFinder.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNameFinder.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.txtNameFinder.Location = New System.Drawing.Point(1085, 675)
+        Me.txtNameFinder.Location = New System.Drawing.Point(1085, 655)
         Me.txtNameFinder.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtNameFinder.Name = "txtNameFinder"
         Me.txtNameFinder.Size = New System.Drawing.Size(307, 23)
@@ -500,9 +500,9 @@ Partial Class frmCalculator
         '
         Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFind.ForeColor = System.Drawing.Color.White
-        Me.btnFind.Location = New System.Drawing.Point(1085, 692)
+        Me.btnFind.Location = New System.Drawing.Point(1085, 678)
         Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(307, 45)
+        Me.btnFind.Size = New System.Drawing.Size(307, 59)
         Me.btnFind.TabIndex = 41
         Me.btnFind.Text = "Find"
         Me.btnFind.UseVisualStyleBackColor = True
