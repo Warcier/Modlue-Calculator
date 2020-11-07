@@ -3,9 +3,12 @@
     'Initializing Class From CalculatorClass.vb
     Dim CALCULATOR As New CalculatorClass
     Dim Result As New Result
+
+    'Gobal Variables for accessing all function/sub inside this Class
     Dim CountA As Integer
     Dim CountF As Integer
     Dim moduleAverage As Double
+    Dim Average As Integer
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -18,7 +21,7 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click 'Class btn for removing the text box
-        CALCULATOR.ClearTextBox()
+        ClearTextBox()
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
@@ -28,16 +31,16 @@
 
 
         Name = txtFullname.Text
-        lstStudent_Record.Items.Add(Name)
+        lstStudent_Record.Items.Add(Name) 'Add "Name" the list
 
-        Test = CInt(CALCULATOR.EmptyCheck(txtTest.Text))
-        Quizzes = CInt(CALCULATOR.EmptyCheck(txtQuizzes.Text))
-        Project = CInt(CALCULATOR.EmptyCheck(txtProject.Text))
+        Test = CInt(CALCULATOR.EmptyCheck(txtTest.Text, "Test"))
+        Quizzes = CInt(CALCULATOR.EmptyCheck(txtQuizzes.Text, "Quizzes"))
+        Project = CInt(CALCULATOR.EmptyCheck(txtProject.Text, "Project"))
 
         txtCAMark.Text = CStr(CALCULATOR.CA_Mark(Test, Project, Quizzes))
 
         'Exam Mark
-        Exam = CInt(CALCULATOR.EmptyCheck(txtExam.Text))
+        Exam = CInt(CALCULATOR.EmptyCheck(txtExam.Text, "Exam"))
 
         'CA Mark
         CAScore_Var = txtCAMark.Text
@@ -59,18 +62,21 @@
             CountF += 1
         End If
 
-        Module_M += Module_M
-        moduleAverage = Module_M / lstStudent_Record.Items.Count()
+        'To Calculate the Average
+        Average += Module_M
+        moduleAverage = Average / lstStudent_Record.Items.Count()
 
 
 
     End Sub
 
     Private Sub btnShowStats_Click(sender As Object, e As EventArgs) Handles btnShowStats.Click
+
         txtCountToA.Text = CountA
         txtCountToF.Text = CountF
         txtModule_Average.Text = CStr(Math.Round(moduleAverage, 2))
         txtNoStudents.Text = lstStudent_Record.Items.Count()
+
     End Sub
 
     'Find Student Name
@@ -95,22 +101,26 @@
 
     End Sub
 
+    'Function to Clear txtBox
+    Public Sub ClearTextBox()
+
+        txtModule_Grade.Clear()
+        txtModule_Marks.Clear()
+        txtCAMark.Clear()
+        txtRemarks.Clear()
+        txtTest.Clear()
+        txtQuizzes.Clear()
+        txtProject.Clear()
+        txtExam.Clear()
+        txtFullname.Clear()
+    End Sub
 
     '///////////////////////////////////
 End Class
 
+'All Calcutor Function 
 Public Class CalculatorClass
 
-    Public Property lstStudent_Record As Object
-    Public Property txtModule_Grade As Object
-    Public Property txtModule_Marks As Object
-    Public Property txtCAMark As Object
-    Public Property txtTest As Object
-    Public Property txtQuizzes As Object
-    Public Property txtRemarks As Object
-    Public Property txtProject As Object
-    Public Property txtFullname As Object
-    Public Property txtExam As Object
     Public Property alert As MsgBoxResult
     Const TEST_PERCENTAGE As Double = 0.5
     Const TEST_PROJECT As Double = 0.3
@@ -190,33 +200,15 @@ Public Class CalculatorClass
     End Function
 
     'Function to Check empty text box
-    Public Function EmptyCheck(ByVal text As String)
+    Public Function EmptyCheck(ByVal text As String, ByVal Warning As String)
         If text = "" Then
-            Return MsgBox("Please input every Box", MsgBoxStyle.Information, "Error")
+            Return MsgBox("Please input " & Warning & " box", MsgBoxStyle.Information, "Error")
         Else
             Return text
         End If
 
     End Function
 
-    'Add Record to List Check
-
-
-
-
-    'Function to Clear txtBox
-    Public Sub ClearTextBox()
-
-        txtModule_Grade = ""
-        txtModule_Marks = ""
-        txtCAMark = ""
-        txtRemarks = ""
-        txtTest = ""
-        txtQuizzes = ""
-        txtProject = ""
-        txtExam = ""
-        txtFullname = ""
-    End Sub
 
 End Class
 
