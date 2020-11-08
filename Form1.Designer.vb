@@ -22,7 +22,16 @@ Partial Class frmCalculator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lblName = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.blName = New System.Windows.Forms.Label()
         Me.txtFullname = New System.Windows.Forms.TextBox()
         Me.lblHeader1 = New System.Windows.Forms.Label()
         Me.lblHeader2 = New System.Windows.Forms.Label()
@@ -62,18 +71,25 @@ Partial Class frmCalculator
         Me.btnShowStats = New System.Windows.Forms.Button()
         Me.txtNameFinder = New System.Windows.Forms.TextBox()
         Me.btnFind = New System.Windows.Forms.Button()
+        Me.Data_ModuleMark = New System.Windows.Forms.DataGridView()
+        Me.Col_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col_CA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col_Module_Grade = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col_Module_Marks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col_Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.Data_ModuleMark, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblName
+        'blName
         '
-        Me.lblName.AutoSize = True
-        Me.lblName.ForeColor = System.Drawing.Color.Snow
-        Me.lblName.Location = New System.Drawing.Point(28, 80)
-        Me.lblName.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(59, 20)
-        Me.lblName.TabIndex = 1
-        Me.lblName.Text = "Name :"
+        Me.blName.AutoSize = True
+        Me.blName.ForeColor = System.Drawing.Color.Snow
+        Me.blName.Location = New System.Drawing.Point(28, 80)
+        Me.blName.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.blName.Name = "blName"
+        Me.blName.Size = New System.Drawing.Size(59, 20)
+        Me.blName.TabIndex = 1
+        Me.blName.Text = "Name :"
         '
         'txtFullname
         '
@@ -315,7 +331,7 @@ Partial Class frmCalculator
         '
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(787, 692)
+        Me.btnExit.Location = New System.Drawing.Point(787, 15)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(299, 45)
         Me.btnExit.TabIndex = 23
@@ -471,7 +487,7 @@ Partial Class frmCalculator
         Me.Panel2.BackColor = System.Drawing.Color.Gray
         Me.Panel2.Location = New System.Drawing.Point(0, 432)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1086, 18)
+        Me.Panel2.Size = New System.Drawing.Size(1086, 29)
         Me.Panel2.TabIndex = 38
         '
         'btnShowStats
@@ -507,12 +523,104 @@ Partial Class frmCalculator
         Me.btnFind.Text = "Find"
         Me.btnFind.UseVisualStyleBackColor = True
         '
+        'Data_ModuleMark
+        '
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Data_ModuleMark.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.Data_ModuleMark.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Data_ModuleMark.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Data_ModuleMark.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Data_ModuleMark.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Data_ModuleMark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Data_ModuleMark.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Col_Name, Me.Col_CA, Me.Col_Module_Grade, Me.Col_Module_Marks, Me.Col_Remarks})
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.InactiveCaption
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Data_ModuleMark.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Data_ModuleMark.GridColor = System.Drawing.Color.Teal
+        Me.Data_ModuleMark.Location = New System.Drawing.Point(0, 454)
+        Me.Data_ModuleMark.Name = "Data_ModuleMark"
+        Me.Data_ModuleMark.ReadOnly = True
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Data_ModuleMark.RowsDefaultCellStyle = DataGridViewCellStyle9
+        Me.Data_ModuleMark.Size = New System.Drawing.Size(1086, 283)
+        Me.Data_ModuleMark.TabIndex = 42
+        '
+        'Col_Name
+        '
+        Me.Col_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        Me.Col_Name.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Col_Name.HeaderText = "Name"
+        Me.Col_Name.Name = "Col_Name"
+        Me.Col_Name.ReadOnly = True
+        '
+        'Col_CA
+        '
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        Me.Col_CA.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Col_CA.HeaderText = "CA Mark"
+        Me.Col_CA.Name = "Col_CA"
+        Me.Col_CA.ReadOnly = True
+        '
+        'Col_Module_Grade
+        '
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        Me.Col_Module_Grade.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Col_Module_Grade.HeaderText = "Module Grade"
+        Me.Col_Module_Grade.Name = "Col_Module_Grade"
+        Me.Col_Module_Grade.ReadOnly = True
+        '
+        'Col_Module_Marks
+        '
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.Col_Module_Marks.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Col_Module_Marks.HeaderText = "Module Marks"
+        Me.Col_Module_Marks.Name = "Col_Module_Marks"
+        Me.Col_Module_Marks.ReadOnly = True
+        '
+        'Col_Remarks
+        '
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        Me.Col_Remarks.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Col_Remarks.HeaderText = "Remarks"
+        Me.Col_Remarks.Name = "Col_Remarks"
+        Me.Col_Remarks.ReadOnly = True
+        '
         'frmCalculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1392, 737)
+        Me.Controls.Add(Me.Data_ModuleMark)
         Me.Controls.Add(Me.btnFind)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.txtNameFinder)
@@ -552,19 +660,20 @@ Partial Class frmCalculator
         Me.Controls.Add(Me.lblHeader2)
         Me.Controls.Add(Me.lblHeader1)
         Me.Controls.Add(Me.txtFullname)
-        Me.Controls.Add(Me.lblName)
+        Me.Controls.Add(Me.blName)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ForeColor = System.Drawing.Color.Snow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "frmCalculator"
         Me.Text = "Calculation of Module Grade"
+        CType(Me.Data_ModuleMark, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lblName As Label
+    Friend WithEvents blName As Label
     Friend WithEvents txtFullname As TextBox
     Friend WithEvents lblHeader1 As Label
     Friend WithEvents lblHeader2 As Label
@@ -604,4 +713,10 @@ Partial Class frmCalculator
     Friend WithEvents btnShowStats As Button
     Friend WithEvents txtNameFinder As TextBox
     Friend WithEvents btnFind As Button
+    Friend WithEvents Data_ModuleMark As DataGridView
+    Friend WithEvents Col_Name As DataGridViewTextBoxColumn
+    Friend WithEvents Col_CA As DataGridViewTextBoxColumn
+    Friend WithEvents Col_Module_Grade As DataGridViewTextBoxColumn
+    Friend WithEvents Col_Module_Marks As DataGridViewTextBoxColumn
+    Friend WithEvents Col_Remarks As DataGridViewTextBoxColumn
 End Class

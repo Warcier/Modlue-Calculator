@@ -66,6 +66,8 @@
         Average += Module_M
         moduleAverage = Average / lstStudent_Record.Items.Count()
 
+        AddRow(Data_ModuleMark)
+
 
 
     End Sub
@@ -97,6 +99,13 @@
         End If
     End Sub
 
+    Sub AddRow(RecordAdd As DataGridView)
+
+        Dim StringRow_Arr As String()
+        StringRow_Arr = New String() {txtFullname.Text, txtCAMark.Text, txtModule_Grade.Text, txtModule_Marks.Text, txtRemarks.Text}
+        RecordAdd.Rows.Add(StringRow_Arr)
+    End Sub
+
     Private Sub txtNameFinder_TextChanged(sender As Object, e As EventArgs) Handles txtNameFinder.TextChanged
 
     End Sub
@@ -114,6 +123,8 @@
         txtExam.Clear()
         txtFullname.Clear()
     End Sub
+
+
 
     '///////////////////////////////////
 End Class
