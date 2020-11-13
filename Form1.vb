@@ -1,4 +1,5 @@
-﻿Public Class frmCalculator
+﻿Imports System.Data.OleDb
+Public Class frmCalculator
 
     'Initializing Class From CalculatorClass.vb
     Dim CALCULATOR As New CalculatorClass
@@ -10,24 +11,24 @@
     Dim moduleAverage As Double
     Dim Average As Integer
     Dim alert As String = "Error"
+    Dim ID As Integer = 1
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'StudentRecordDataSet.Student_Record' table. You can move, or remove it, as needed.
-        Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
+
 
     End Sub
 
     '///////////////////////////////////
     'Btn Class
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Close()
-    End Sub
+
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click 'Class btn for removing the text box
         ClearTextBox()
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
+
+
 
         Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_M As Integer
 
@@ -66,6 +67,8 @@
         ElseIf txtModule_Grade.Text = Result.F() Then
             CountF += 1
         End If
+
+
 
     End Sub
 
@@ -122,6 +125,52 @@
 
     End Sub
 
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+
+        'Adding Data to Access
+        Dim Provider, DataFile, connstring, InsertSQL As String
+        
+        Dim MyConnection As OleDbConnection = New OleDbConnection
+
+        Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+        DataFile = "D:\SchoolWork\Database Applications Development 1A\Project\VB Project\Project2021\StudentRecord.accdb"
+        connstring = Provider & DataFile
+        MyConnection.ConnectionString = connstring
+        MyConnection.Open()
+        InsertSQL = "Insert into [Student Record](StudentID, FullName, CA_Mark, Module_Grade, Module_Mark, Remark) Values (?,?,?,?,?,?)"
+        Dim DataConnRef As OleDbCommand = New OleDbCommand(InsertSQL, MyConnection)
+        DataConnRef.Parameters.Add(New OleDbParameter("StudentID", CType(txtSTUID.Text, Integer)))
+        DataConnRef.Parameters.Add(New OleDbParameter("FullName", CType(txtFullname.Text, String)))
+        DataConnRef.Parameters.Add(New OleDbParameter("CA_Mark", CType(txtCAMark.Text, Integer)))
+        DataConnRef.Parameters.Add(New OleDbParameter("Module_Grade", CType(txtModule_Grade.Text, String)))
+        DataConnRef.Parameters.Add(New OleDbParameter("Module_Mark", CType(txtModule_Marks.Text, Integer)))
+        DataConnRef.Parameters.Add(New OleDbParameter("Remark", CType(txtRemarks.Text, String)))
+
+        Try
+            DataConnRef.ExecuteNonQuery()
+            DataConnRef.Dispose()
+            MyConnection.Close()
+
+
+        Catch Errors As Exception
+            MsgBox(Errors.Message)
+        End Try
+
+
+
+
+
+    End Sub
+
+    Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
+
+        For i = 0 To 2 Step 1
+            'TODO: This line of code loads data into the 'StudentRecordDataSet.Student_Record' table. You can move, or remove it, as needed.
+            Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
+        Next
+
+    End Sub
 
     '///////////////////////////////////
 End Class
