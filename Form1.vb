@@ -9,8 +9,11 @@
     Dim CountF As Integer
     Dim moduleAverage As Double
     Dim Average As Integer
+    Dim alert As String = "Error"
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'StudentRecordDataSet.Student_Record' table. You can move, or remove it, as needed.
+        Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
 
     End Sub
 
@@ -27,23 +30,18 @@
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
 
         Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_M As Integer
-        Dim alert As String = "Error"
-
 
         Name = txtFullname.Text
-        lstStudent_Record.Items.Add(Name) 'Add "Name" the list
-
         Test = CInt(CALCULATOR.EmptyCheck(txtTest.Text, "Test"))
         Quizzes = CInt(CALCULATOR.EmptyCheck(txtQuizzes.Text, "Quizzes"))
         Project = CInt(CALCULATOR.EmptyCheck(txtProject.Text, "Project"))
 
+        'CA Mark
         txtCAMark.Text = CStr(CALCULATOR.CA_Mark(Test, Project, Quizzes))
+        CAScore_Var = txtCAMark.Text
 
         'Exam Mark
         Exam = CInt(CALCULATOR.EmptyCheck(txtExam.Text, "Exam"))
-
-        'CA Mark
-        CAScore_Var = txtCAMark.Text
 
         'Moudle Mark
         txtModule_Marks.Text = CStr(CALCULATOR.Module_Mark(CAScore_Var, Exam))
@@ -55,20 +53,19 @@
         'Remarks
         txtRemarks.Text = CALCULATOR.Remark(Module_M, CALCULATOR.Module_Grade(CAScore_Var, Exam, Module_M))
 
+        'Add "Name" the list
+        lstStudent_Record.Items.Add(Name)
+
+        'To Calculate the Average
+        Average += Module_M
+        moduleAverage = Average / lstStudent_Record.Items.Count()
+
         'Add 1 to Count A Or F 
         If txtModule_Grade.Text = Result.A() Then
             CountA += 1
         ElseIf txtModule_Grade.Text = Result.F() Then
             CountF += 1
         End If
-
-        'To Calculate the Average
-        Average += Module_M
-        moduleAverage = Average / lstStudent_Record.Items.Count()
-
-        AddRow(Data_ModuleMark)
-
-
 
     End Sub
 
@@ -94,20 +91,14 @@
             End If
         Next
 
-        If n = -1 Then
-            MessageBox.Show(txtNameFinder.Text & " not found")
+        If txtNameFinder.Text = "" Then
+
+            MessageBox.Show("Please input a name")
+        Else
+            If n = -1 Then
+                MessageBox.Show(txtNameFinder.Text & " not found")
+            End If
         End If
-    End Sub
-
-    Sub AddRow(RecordAdd As DataGridView)
-
-        Dim StringRow_Arr As String()
-        StringRow_Arr = New String() {txtFullname.Text, txtCAMark.Text, txtModule_Grade.Text, txtModule_Marks.Text, txtRemarks.Text}
-        RecordAdd.Rows.Add(StringRow_Arr)
-    End Sub
-
-    Private Sub txtNameFinder_TextChanged(sender As Object, e As EventArgs) Handles txtNameFinder.TextChanged
-
     End Sub
 
     'Function to Clear txtBox
@@ -124,6 +115,12 @@
         txtFullname.Clear()
     End Sub
 
+    Private Sub BarResultIndicator_Click(sender As Object, e As EventArgs) Handles BarResultIndicator.Click
+
+        Dim Conversion As Int32 = CInt(txtModule_Average.Text)
+        BarResultIndicator.Value = Conversion
+
+    End Sub
 
 
     '///////////////////////////////////
