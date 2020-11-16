@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class frmCalculator
 
-    'Initializing Class From CalculatorClass.vb
-    Dim CALCULATOR As New CalculatorClass
+    'Initializing Class
+    Dim CalculatorLibrary As New CalculatorClass
     Dim Result As New Result
 
     'Gobal Variables for accessing all function/sub inside this Class
@@ -10,65 +10,76 @@ Public Class frmCalculator
     Dim CountF As Integer
     Dim moduleAverage As Double
     Dim Average As Integer
-    Dim alert As String = "Error"
-    Dim ID As Integer = 1
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
 
     End Sub
 
     '///////////////////////////////////
     'Btn Class
 
+    'Class btn for removing the text box
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click 'Class btn for removing the text box
         ClearTextBox()
+
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
 
-
-
         Dim Test, Quizzes, Project, Exam, CAScore_Var, Module_M As Integer
-
         Name = txtFullname.Text
-        Test = CInt(CALCULATOR.EmptyCheck(txtTest.Text, "Test"))
-        Quizzes = CInt(CALCULATOR.EmptyCheck(txtQuizzes.Text, "Quizzes"))
-        Project = CInt(CALCULATOR.EmptyCheck(txtProject.Text, "Project"))
-
-        'CA Mark
-        txtCAMark.Text = CStr(CALCULATOR.CA_Mark(Test, Project, Quizzes))
-        CAScore_Var = txtCAMark.Text
-
-        'Exam Mark
-        Exam = CInt(CALCULATOR.EmptyCheck(txtExam.Text, "Exam"))
-
-        'Moudle Mark
-        txtModule_Marks.Text = CStr(CALCULATOR.Module_Mark(CAScore_Var, Exam))
-        Module_M = txtModule_Marks.Text
-
-        'Module Grade
-        txtModule_Grade.Text = CALCULATOR.Module_Grade(CAScore_Var, Exam, Module_M)
-
-        'Remarks
-        txtRemarks.Text = CALCULATOR.Remark(Module_M, CALCULATOR.Module_Grade(CAScore_Var, Exam, Module_M))
 
         'Add "Name" the list
-        lstStudent_Record.Items.Add(Name)
+        If Name = "" Or IsNumeric(Name) Then
+            MsgBox("Please Input a name")
+        Else
 
-        'To Calculate the Average
-        Average += Module_M
-        moduleAverage = Average / lstStudent_Record.Items.Count()
 
-        'Add 1 to Count A Or F 
-        If txtModule_Grade.Text = Result.A() Then
-            CountA += 1
-        ElseIf txtModule_Grade.Text = Result.F() Then
-            CountF += 1
+            Test = CInt(CalculatorLibrary.EmptyCheck(txtTest.Text, "Test"))
+            Quizzes = CInt(CalculatorLibrary.EmptyCheck(txtQuizzes.Text, "Quizzes"))
+            Project = CInt(CalculatorLibrary.EmptyCheck(txtProject.Text, "Project"))
+            Exam = CInt(CalculatorLibrary.EmptyCheck(txtExam.Text, "Exam"))
+
+            If txtTest.Text = "" Or txtQuizzes.Text = "" Or txtProject.Text = "" Or txtProject.Text = "" Then
+
+                'Do nothing 
+
+            Else
+
+                'Add to list 
+                lstStudent_Record.Items.Add(Name)
+
+                'CA Mark
+                txtCAMark.Text = CStr(CalculatorLibrary.CA_Mark(Test, Project, Quizzes))
+                CAScore_Var = txtCAMark.Text
+
+
+                'Moudle Mark
+                txtModule_Marks.Text = CStr(CalculatorLibrary.Module_Mark(CAScore_Var, Exam))
+                Module_M = txtModule_Marks.Text
+
+                'Module Grade
+                txtModule_Grade.Text = CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M)
+
+                'Remarks
+                txtRemarks.Text = CalculatorLibrary.Remark(Module_M, CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M))
+
+                'To Calculate the Average
+                Average += Module_M
+                moduleAverage = Average / lstStudent_Record.Items.Count()
+
+                'Add 1 to Count A Or F 
+                If txtModule_Grade.Text = Result.A() Then
+                    CountA += 1
+                ElseIf txtModule_Grade.Text = Result.F() Then
+                    CountF += 1
+                End If
+
+            End If
         End If
-
-
 
     End Sub
 
@@ -104,6 +115,56 @@ Public Class frmCalculator
         End If
     End Sub
 
+
+    Private Sub BarResultIndicator_Click(sender As Object, e As EventArgs) Handles BarResultIndicator.Click
+
+        Dim Conversion As Int32 = CInt(txtModule_Average.Text)
+        BarResultIndicator.Value = Conversion
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+        If txtSTUID.Text = "" Or txtFullname.Text = "" Or txtCAMark.Text = "" Or txtModule_Grade.Text = "" Or txtModule_Marks.Text = "" Or txtRemarks.Text = "" Then
+
+            MsgBox("Please input all the required Field [StudentID,CA Mark,Module Marks,Module Grade,Remarks] before adding to Database")
+
+        Else
+            'Adding Data to Access
+            Dim Provider, DataFile, connstring, InsertSQL As String
+            Dim MyConnection As OleDbConnection = New OleDbConnection
+
+            Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+            DataFile = "D:\SchoolWork\Database Applications Development 1A\Project\VB Project\Project2021\StudentRecord.accdb"
+            connstring = Provider & DataFile
+            MyConnection.ConnectionString = connstring
+            MyConnection.Open()
+            InsertSQL = "Insert into [Student Record](StudentID, FullName, CA_Mark, Module_Grade, Module_Mark, Remark) Values (?,?,?,?,?,?)"
+            Dim DataConnRef As OleDbCommand = New OleDbCommand(InsertSQL, MyConnection) 'Initializes and executes query
+            DataConnRef.Parameters.Add(New OleDbParameter("StudentID", CType(txtSTUID.Text, Integer)))
+            DataConnRef.Parameters.Add(New OleDbParameter("FullName", txtFullname.Text))
+            DataConnRef.Parameters.Add(New OleDbParameter("CA_Mark", CType(txtCAMark.Text, Integer)))
+            DataConnRef.Parameters.Add(New OleDbParameter("Module_Grade", txtModule_Grade.Text))
+            DataConnRef.Parameters.Add(New OleDbParameter("Module_Mark", CType(txtModule_Marks.Text, Integer)))
+            DataConnRef.Parameters.Add(New OleDbParameter("Remark", txtRemarks.Text))
+
+            Try
+                DataConnRef.ExecuteNonQuery()
+                DataConnRef.Dispose()
+                MyConnection.Close()
+                MsgBox("Successsfully Added to Database")
+
+
+            Catch Errors As Exception
+                MsgBox(Errors.Message)
+            End Try
+
+        End If
+
+    End Sub
+
+
+
     'Function to Clear txtBox
     Public Sub ClearTextBox()
 
@@ -116,60 +177,6 @@ Public Class frmCalculator
         txtProject.Clear()
         txtExam.Clear()
         txtFullname.Clear()
-    End Sub
-
-    Private Sub BarResultIndicator_Click(sender As Object, e As EventArgs) Handles BarResultIndicator.Click
-
-        Dim Conversion As Int32 = CInt(txtModule_Average.Text)
-        BarResultIndicator.Value = Conversion
-
-    End Sub
-
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-
-
-        'Adding Data to Access
-        Dim Provider, DataFile, connstring, InsertSQL As String
-        
-        Dim MyConnection As OleDbConnection = New OleDbConnection
-
-        Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-        DataFile = "D:\SchoolWork\Database Applications Development 1A\Project\VB Project\Project2021\StudentRecord.accdb"
-        connstring = Provider & DataFile
-        MyConnection.ConnectionString = connstring
-        MyConnection.Open()
-        InsertSQL = "Insert into [Student Record](StudentID, FullName, CA_Mark, Module_Grade, Module_Mark, Remark) Values (?,?,?,?,?,?)"
-        Dim DataConnRef As OleDbCommand = New OleDbCommand(InsertSQL, MyConnection)
-        DataConnRef.Parameters.Add(New OleDbParameter("StudentID", CType(txtSTUID.Text, Integer)))
-        DataConnRef.Parameters.Add(New OleDbParameter("FullName", CType(txtFullname.Text, String)))
-        DataConnRef.Parameters.Add(New OleDbParameter("CA_Mark", CType(txtCAMark.Text, Integer)))
-        DataConnRef.Parameters.Add(New OleDbParameter("Module_Grade", CType(txtModule_Grade.Text, String)))
-        DataConnRef.Parameters.Add(New OleDbParameter("Module_Mark", CType(txtModule_Marks.Text, Integer)))
-        DataConnRef.Parameters.Add(New OleDbParameter("Remark", CType(txtRemarks.Text, String)))
-
-        Try
-            DataConnRef.ExecuteNonQuery()
-            DataConnRef.Dispose()
-            MyConnection.Close()
-
-
-        Catch Errors As Exception
-            MsgBox(Errors.Message)
-        End Try
-
-
-
-
-
-    End Sub
-
-    Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-
-        For i = 0 To 2 Step 1
-            'TODO: This line of code loads data into the 'StudentRecordDataSet.Student_Record' table. You can move, or remove it, as needed.
-            Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
-        Next
-
     End Sub
 
     '///////////////////////////////////
@@ -256,6 +263,8 @@ Public Class CalculatorClass
 
     End Function
 
+
+
     'Function to Check empty text box
     Public Function EmptyCheck(ByVal text As String, ByVal Warning As String)
         If text = "" Then
@@ -265,6 +274,7 @@ Public Class CalculatorClass
         End If
 
     End Function
+
 
 
 End Class

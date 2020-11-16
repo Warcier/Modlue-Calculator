@@ -23,9 +23,9 @@ Partial Class frmCalculator
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.blName = New System.Windows.Forms.Label()
         Me.txtFullname = New System.Windows.Forms.TextBox()
         Me.lblQuizzes = New System.Windows.Forms.Label()
@@ -45,7 +45,6 @@ Partial Class frmCalculator
         Me.txtCAMark = New System.Windows.Forms.TextBox()
         Me.txtModule_Grade = New System.Windows.Forms.TextBox()
         Me.lstStudent_Record = New System.Windows.Forms.ListBox()
-        Me.btnShow = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnConfirm = New System.Windows.Forms.Button()
         Me.txtCountToF = New System.Windows.Forms.TextBox()
@@ -308,17 +307,6 @@ Partial Class frmCalculator
         Me.lstStudent_Record.Size = New System.Drawing.Size(333, 660)
         Me.lstStudent_Record.TabIndex = 22
         '
-        'btnShow
-        '
-        Me.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnShow.ForeColor = System.Drawing.Color.White
-        Me.btnShow.Location = New System.Drawing.Point(286, 368)
-        Me.btnShow.Name = "btnShow"
-        Me.btnShow.Size = New System.Drawing.Size(204, 30)
-        Me.btnShow.TabIndex = 23
-        Me.btnShow.Text = "Show Database"
-        Me.btnShow.UseVisualStyleBackColor = True
-        '
         'btnClear
         '
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -561,7 +549,6 @@ Partial Class frmCalculator
         Me.GrpMarksGrade.Controls.Add(Me.btnAdd)
         Me.GrpMarksGrade.Controls.Add(Me.blName)
         Me.GrpMarksGrade.Controls.Add(Me.GrpInputExam)
-        Me.GrpMarksGrade.Controls.Add(Me.btnShow)
         Me.GrpMarksGrade.Controls.Add(Me.txtFullname)
         Me.GrpMarksGrade.ForeColor = System.Drawing.Color.Silver
         Me.GrpMarksGrade.Location = New System.Drawing.Point(12, 32)
@@ -575,7 +562,7 @@ Partial Class frmCalculator
         '
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(35, 368)
+        Me.btnAdd.Location = New System.Drawing.Point(161, 372)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(204, 30)
         Me.btnAdd.TabIndex = 45
@@ -629,31 +616,31 @@ Partial Class frmCalculator
         Me.StudentRecordDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
         Me.StudentRecordDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.StudentRecordDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentRecordDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentRecordDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.StudentRecordDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StudentRecordDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StudentIDDataGridViewTextBoxColumn, Me.FullNameDataGridViewTextBoxColumn, Me.CAMarkDataGridViewTextBoxColumn, Me.ModuleGradeDataGridViewTextBoxColumn, Me.ModuleMarkDataGridViewTextBoxColumn, Me.RemarkDataGridViewTextBoxColumn})
         Me.StudentRecordDataGrid.DataSource = Me.StudentRecordBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Snow
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentRecordDataGrid.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentRecordDataGrid.DefaultCellStyle = DataGridViewCellStyle5
         Me.StudentRecordDataGrid.Location = New System.Drawing.Point(1, 470)
         Me.StudentRecordDataGrid.Name = "StudentRecordDataGrid"
         Me.StudentRecordDataGrid.ReadOnly = True
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        Me.StudentRecordDataGrid.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        Me.StudentRecordDataGrid.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.StudentRecordDataGrid.Size = New System.Drawing.Size(1089, 295)
         Me.StudentRecordDataGrid.TabIndex = 48
         '
@@ -785,7 +772,6 @@ Partial Class frmCalculator
     Friend WithEvents txtCAMark As TextBox
     Friend WithEvents txtModule_Grade As TextBox
     Friend WithEvents lstStudent_Record As ListBox
-    Friend WithEvents btnShow As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnConfirm As Button
     Friend WithEvents txtCountToF As TextBox
