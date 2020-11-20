@@ -172,6 +172,28 @@ Public Class frmCalculator
 
     End Sub
 
+    Private Sub GrpMarksGrade_Enter(sender As Object, e As EventArgs) Handles GrpMarksGrade.Enter
+
+    End Sub
+
+    Private Sub GrpModuleStatistic_Enter(sender As Object, e As EventArgs) Handles GrpModuleStatistic.Enter
+
+    End Sub
+
+    Private Sub StudentRecordDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles StudentRecordDataGrid.CellContentClick
+
+    End Sub
+
+    Private Sub txtNameFinder_TextChanged(sender As Object, e As EventArgs) Handles txtNameFinder.TextChanged
+
+    End Sub
+
+    Private Sub lstStudent_Record_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstStudent_Record.SelectedIndexChanged
+
+    End Sub
+
+
+
     '///////////////////////////////////
 End Class
 
