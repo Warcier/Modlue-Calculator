@@ -23,9 +23,9 @@ Partial Class frmCalculator
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.blName = New System.Windows.Forms.Label()
         Me.txtFullname = New System.Windows.Forms.TextBox()
         Me.lblQuizzes = New System.Windows.Forms.Label()
@@ -67,7 +67,9 @@ Partial Class frmCalculator
         Me.txtSTUID = New System.Windows.Forms.TextBox()
         Me.GrpMarksGrade = New System.Windows.Forms.GroupBox()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pnlMoveBar = New System.Windows.Forms.Panel()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnMinimized = New System.Windows.Forms.Button()
         Me.GrpModuleStatistic = New System.Windows.Forms.GroupBox()
         Me.BarResultIndicator = New System.Windows.Forms.ProgressBar()
         Me.StudentRecordDataGrid = New System.Windows.Forms.DataGridView()
@@ -86,6 +88,7 @@ Partial Class frmCalculator
         Me.GrpMR.SuspendLayout()
         Me.GrpInputExam.SuspendLayout()
         Me.GrpMarksGrade.SuspendLayout()
+        Me.pnlMoveBar.SuspendLayout()
         Me.GrpModuleStatistic.SuspendLayout()
         CType(Me.StudentRecordDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentRecordBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,7 +110,7 @@ Partial Class frmCalculator
         '
         'txtFullname
         '
-        Me.txtFullname.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtFullname.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtFullname.Location = New System.Drawing.Point(77, 34)
@@ -162,7 +165,7 @@ Partial Class frmCalculator
         '
         'txtQuizzes
         '
-        Me.txtQuizzes.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtQuizzes.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtQuizzes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtQuizzes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtQuizzes.Location = New System.Drawing.Point(100, 70)
@@ -173,7 +176,7 @@ Partial Class frmCalculator
         '
         'txtTest
         '
-        Me.txtTest.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtTest.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtTest.Location = New System.Drawing.Point(100, 37)
@@ -184,7 +187,7 @@ Partial Class frmCalculator
         '
         'txtExam
         '
-        Me.txtExam.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtExam.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtExam.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtExam.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtExam.Location = New System.Drawing.Point(100, 137)
@@ -195,7 +198,7 @@ Partial Class frmCalculator
         '
         'txtProject
         '
-        Me.txtProject.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtProject.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtProject.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProject.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtProject.Location = New System.Drawing.Point(100, 104)
@@ -250,7 +253,7 @@ Partial Class frmCalculator
         '
         'txtModule_Marks
         '
-        Me.txtModule_Marks.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Marks.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtModule_Marks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Marks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtModule_Marks.Location = New System.Drawing.Point(133, 102)
@@ -262,7 +265,7 @@ Partial Class frmCalculator
         '
         'txtRemarks
         '
-        Me.txtRemarks.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtRemarks.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtRemarks.Location = New System.Drawing.Point(133, 133)
@@ -274,7 +277,7 @@ Partial Class frmCalculator
         '
         'txtCAMark
         '
-        Me.txtCAMark.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCAMark.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtCAMark.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCAMark.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtCAMark.Location = New System.Drawing.Point(133, 38)
@@ -286,7 +289,7 @@ Partial Class frmCalculator
         '
         'txtModule_Grade
         '
-        Me.txtModule_Grade.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Grade.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtModule_Grade.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Grade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtModule_Grade.Location = New System.Drawing.Point(133, 70)
@@ -298,7 +301,7 @@ Partial Class frmCalculator
         '
         'lstStudent_Record
         '
-        Me.lstStudent_Record.BackColor = System.Drawing.Color.RosyBrown
+        Me.lstStudent_Record.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.lstStudent_Record.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstStudent_Record.FormattingEnabled = True
         Me.lstStudent_Record.ItemHeight = 20
@@ -331,7 +334,7 @@ Partial Class frmCalculator
         '
         'txtCountToF
         '
-        Me.txtCountToF.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCountToF.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtCountToF.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountToF.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtCountToF.Location = New System.Drawing.Point(299, 217)
@@ -343,7 +346,7 @@ Partial Class frmCalculator
         '
         'txtModule_Average
         '
-        Me.txtModule_Average.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtModule_Average.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtModule_Average.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModule_Average.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtModule_Average.Location = New System.Drawing.Point(299, 268)
@@ -355,7 +358,7 @@ Partial Class frmCalculator
         '
         'txtNoStudents
         '
-        Me.txtNoStudents.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtNoStudents.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNoStudents.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtNoStudents.Location = New System.Drawing.Point(299, 110)
@@ -367,7 +370,7 @@ Partial Class frmCalculator
         '
         'txtCountToA
         '
-        Me.txtCountToA.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtCountToA.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtCountToA.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountToA.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtCountToA.Location = New System.Drawing.Point(299, 166)
@@ -423,7 +426,7 @@ Partial Class frmCalculator
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Gray
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel1.Location = New System.Drawing.Point(567, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(22, 451)
@@ -431,7 +434,7 @@ Partial Class frmCalculator
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Gray
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel2.Location = New System.Drawing.Point(-7, 446)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1097, 36)
@@ -450,7 +453,7 @@ Partial Class frmCalculator
         '
         'txtNameFinder
         '
-        Me.txtNameFinder.BackColor = System.Drawing.Color.LightCoral
+        Me.txtNameFinder.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtNameFinder.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNameFinder.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.txtNameFinder.Location = New System.Drawing.Point(1090, 650)
@@ -535,7 +538,7 @@ Partial Class frmCalculator
         '
         'txtSTUID
         '
-        Me.txtSTUID.BackColor = System.Drawing.Color.RosyBrown
+        Me.txtSTUID.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.txtSTUID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSTUID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.txtSTUID.Location = New System.Drawing.Point(388, 22)
@@ -546,6 +549,7 @@ Partial Class frmCalculator
         '
         'GrpMarksGrade
         '
+        Me.GrpMarksGrade.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.GrpMarksGrade.Controls.Add(Me.btnAdd)
         Me.GrpMarksGrade.Controls.Add(Me.blName)
         Me.GrpMarksGrade.Controls.Add(Me.GrpInputExam)
@@ -569,16 +573,44 @@ Partial Class frmCalculator
         Me.btnAdd.Text = "Add to Data"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Panel3
+        'pnlMoveBar
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Gray
-        Me.Panel3.Location = New System.Drawing.Point(0, 1)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1090, 31)
-        Me.Panel3.TabIndex = 46
+        Me.pnlMoveBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.pnlMoveBar.Controls.Add(Me.btnExit)
+        Me.pnlMoveBar.Controls.Add(Me.btnMinimized)
+        Me.pnlMoveBar.Location = New System.Drawing.Point(0, 1)
+        Me.pnlMoveBar.Name = "pnlMoveBar"
+        Me.pnlMoveBar.Size = New System.Drawing.Size(1090, 31)
+        Me.pnlMoveBar.TabIndex = 46
+        '
+        'btnExit
+        '
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.btnExit.ForeColor = System.Drawing.Color.Gray
+        Me.btnExit.Location = New System.Drawing.Point(1040, 0)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(47, 31)
+        Me.btnExit.TabIndex = 1
+        Me.btnExit.Text = "X"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnMinimized
+        '
+        Me.btnMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnMinimized.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.btnMinimized.ForeColor = System.Drawing.Color.Gray
+        Me.btnMinimized.Location = New System.Drawing.Point(993, 0)
+        Me.btnMinimized.Name = "btnMinimized"
+        Me.btnMinimized.Size = New System.Drawing.Size(47, 31)
+        Me.btnMinimized.TabIndex = 0
+        Me.btnMinimized.Text = "-"
+        Me.btnMinimized.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnMinimized.UseVisualStyleBackColor = True
         '
         'GrpModuleStatistic
         '
+        Me.GrpModuleStatistic.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.GrpModuleStatistic.Controls.Add(Me.BarResultIndicator)
         Me.GrpModuleStatistic.Controls.Add(Me.lblNoStudents)
         Me.GrpModuleStatistic.Controls.Add(Me.lblCountA)
@@ -613,34 +645,34 @@ Partial Class frmCalculator
         Me.StudentRecordDataGrid.AllowUserToDeleteRows = False
         Me.StudentRecordDataGrid.AutoGenerateColumns = False
         Me.StudentRecordDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.StudentRecordDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.StudentRecordDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.StudentRecordDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.StudentRecordDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentRecordDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentRecordDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.StudentRecordDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StudentRecordDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StudentIDDataGridViewTextBoxColumn, Me.FullNameDataGridViewTextBoxColumn, Me.CAMarkDataGridViewTextBoxColumn, Me.ModuleGradeDataGridViewTextBoxColumn, Me.ModuleMarkDataGridViewTextBoxColumn, Me.RemarkDataGridViewTextBoxColumn})
         Me.StudentRecordDataGrid.DataSource = Me.StudentRecordBindingSource
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Snow
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentRecordDataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentRecordDataGrid.DefaultCellStyle = DataGridViewCellStyle8
         Me.StudentRecordDataGrid.Location = New System.Drawing.Point(1, 470)
         Me.StudentRecordDataGrid.Name = "StudentRecordDataGrid"
         Me.StudentRecordDataGrid.ReadOnly = True
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        Me.StudentRecordDataGrid.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        Me.StudentRecordDataGrid.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.StudentRecordDataGrid.Size = New System.Drawing.Size(1089, 295)
         Me.StudentRecordDataGrid.TabIndex = 48
         '
@@ -716,14 +748,14 @@ Partial Class frmCalculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1417, 763)
         Me.Controls.Add(Me.GrpModuleStatistic)
         Me.Controls.Add(Me.StudentRecordDataGrid)
         Me.Controls.Add(Me.GrpMarksGrade)
         Me.Controls.Add(Me.txtNameFinder)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.pnlMoveBar)
         Me.Controls.Add(Me.lstStudent_Record)
         Me.Controls.Add(Me.btnFind)
         Me.Controls.Add(Me.Panel1)
@@ -741,6 +773,7 @@ Partial Class frmCalculator
         Me.GrpInputExam.PerformLayout()
         Me.GrpMarksGrade.ResumeLayout(False)
         Me.GrpMarksGrade.PerformLayout()
+        Me.pnlMoveBar.ResumeLayout(False)
         Me.GrpModuleStatistic.ResumeLayout(False)
         Me.GrpModuleStatistic.PerformLayout()
         CType(Me.StudentRecordDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -791,7 +824,7 @@ Partial Class frmCalculator
     Friend WithEvents GrpMR As GroupBox
     Friend WithEvents GrpInputExam As GroupBox
     Friend WithEvents GrpMarksGrade As GroupBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlMoveBar As Panel
     Friend WithEvents GrpModuleStatistic As GroupBox
     Friend WithEvents BarResultIndicator As ProgressBar
     Friend WithEvents BindSutdent_Record_Data As BindingSource
@@ -809,4 +842,6 @@ Partial Class frmCalculator
     Friend WithEvents btnAdd As Button
     Friend WithEvents txtSTUID As TextBox
     Friend WithEvents lblStdID As Label
+    Friend WithEvents btnExit As Button
+    Friend WithEvents btnMinimized As Button
 End Class

@@ -11,6 +11,11 @@ Public Class frmCalculator
     Dim moduleAverage As Double
     Dim Average As Integer
 
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+
+
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
@@ -178,6 +183,40 @@ Public Class frmCalculator
         txtExam.Clear()
         txtFullname.Clear()
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnMinimized_Click(sender As Object, e As EventArgs) Handles btnMinimized.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub pnlRelease(sender As Object, e As MouseEventArgs) Handles pnlMoveBar.MouseUp
+        drag = False
+    End Sub
+
+    Private Sub pnlPress(sender As Object, e As MouseEventArgs) Handles pnlMoveBar.MouseDown
+        drag = True
+        mousex = Cursor.Position.X - Me.Left
+        mousey = Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub pnlDrag(sender As Object, e As MouseEventArgs) Handles pnlMoveBar.MouseMove
+        If drag Then
+            Me.Top = Cursor.Position.Y - mousey
+            Me.Left = Cursor.Position.X - mousex
+        End If
+    End Sub
+
+
+
+
+
+
+
+
+
 
     '///////////////////////////////////
 End Class
