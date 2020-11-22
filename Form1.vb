@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+
 Public Class frmCalculator
 
     'Initializing Class
@@ -11,6 +12,12 @@ Public Class frmCalculator
     Dim moduleAverage As Double
     Dim Average As Integer
 
+    Const TEST_PERCENTAGE As Double = 0.5
+    Const TEST_PROJECT As Double = 0.3
+    Const TEST_QUIZZES As Double = 0.2
+    Const TEST_CA_MARK As Double = 0.4
+    Const TEST_EXAM_MARK As Double = 0.6
+
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
@@ -19,6 +26,8 @@ Public Class frmCalculator
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
+        lblCAHeader.Text = "CA Component: Test: " & TEST_PERCENTAGE & ", Quiz:" & TEST_QUIZZES & ", Project:" & TEST_PROJECT
+        lblModuleHeader.Text = "Module Result: (CA:" & TEST_CA_MARK & ", Exam:" & TEST_EXAM_MARK & ")"
 
     End Sub
 
@@ -88,6 +97,7 @@ Public Class frmCalculator
 
     End Sub
 
+    'Show Statistic Output
     Private Sub btnShowStats_Click(sender As Object, e As EventArgs) Handles btnShowStats.Click
 
         txtCountToA.Text = CountA
@@ -121,13 +131,8 @@ Public Class frmCalculator
     End Sub
 
 
-    Private Sub BarResultIndicator_Click(sender As Object, e As EventArgs) Handles BarResultIndicator.Click
 
-        Dim Conversion As Int32 = CInt(txtModule_Average.Text)
-        BarResultIndicator.Value = Conversion
-
-    End Sub
-
+    'BTN For adding to database
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         If txtSTUID.Text = "" Or txtFullname.Text = "" Or txtCAMark.Text = "" Or txtModule_Grade.Text = "" Or txtModule_Marks.Text = "" Or txtRemarks.Text = "" Then
@@ -136,13 +141,14 @@ Public Class frmCalculator
 
         Else
             'Adding Data to Access
-            Dim Provider, DataFile, connstring, InsertSQL As String
+            Dim Provider, DataFile, MainConnString, InsertSQL As String
             Dim MyConnection As OleDbConnection = New OleDbConnection
 
             Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-            DataFile = "D:\SchoolWork\Database Applications Development 1A\Project\VB Project\Project2021\StudentRecord.accdb"
-            connstring = Provider & DataFile
-            MyConnection.ConnectionString = connstring
+            DataFile = FileSystem.Dir("StudentRecord.accdb")
+
+            MainConnString = Provider & DataFile
+            MyConnection.ConnectionString = MainConnString
             MyConnection.Open()
             InsertSQL = "Insert into [Student Record](StudentID, FullName, CA_Mark, Module_Grade, Module_Mark, Remark) Values (?,?,?,?,?,?)"
             Dim DataConnRef As OleDbCommand = New OleDbCommand(InsertSQL, MyConnection) 'Initializes and executes query
@@ -158,7 +164,6 @@ Public Class frmCalculator
                 DataConnRef.Dispose()
                 MyConnection.Close()
                 MsgBox("Successsfully Added to Database")
-
 
             Catch Errors As Exception
                 MsgBox(Errors.Message)
@@ -184,6 +189,9 @@ Public Class frmCalculator
         txtFullname.Clear()
     End Sub
 
+
+    '//////////////////////////
+    'WINDOW PANEL
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
@@ -209,13 +217,14 @@ Public Class frmCalculator
         End If
     End Sub
 
+    Private Sub lblCAHeader_Click(sender As Object, e As EventArgs) Handles lblCAHeader.Click
 
+    End Sub
 
+    Private Sub lblModuleHeader_Click(sender As Object, e As EventArgs) Handles lblModuleHeader.Click
 
-
-
-
-
+    End Sub
+    '//////////////////////////
 
 
     '///////////////////////////////////
@@ -228,8 +237,8 @@ Public Class CalculatorClass
     Const TEST_PERCENTAGE As Double = 0.5
     Const TEST_PROJECT As Double = 0.3
     Const TEST_QUIZZES As Double = 0.2
-    Const TEST_CAMark As Double = 0.4
-    Const TEST_Exam_Mark As Double = 0.6
+    Const TEST_CA_MARK As Double = 0.4
+    Const TEST_EXAM_MARK As Double = 0.6
 
     'Function For CA Mark Calculation
     Public Function CA_Mark(ByVal Test As Double, ByVal Project As Double, ByVal Quizzes As Double) As Integer
@@ -253,7 +262,7 @@ Public Class CalculatorClass
     Public Function Module_Mark(ByVal CAMark As Double, ByVal Exam_Mark As Double) As Integer
         Dim ModuleMark As Double
 
-        ModuleMark = CAMark * TEST_CAMark + Exam_Mark * TEST_Exam_Mark
+        ModuleMark = CAMark * TEST_CA_MARK + Exam_Mark * TEST_EXAM_MARK
         Return ModuleMark
 
     End Function
