@@ -26,8 +26,8 @@ Public Class frmCalculator
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.Student_RecordTableAdapter.Fill(Me.StudentRecordDataSet.Student_Record)
-        lblCAHeader.Text = "CA Component: Test: " & TEST_PERCENTAGE & ", Quiz:" & TEST_QUIZZES & ", Project:" & TEST_PROJECT
-        lblModuleHeader.Text = "Module Result: (CA:" & TEST_CA_MARK & ", Exam:" & TEST_EXAM_MARK & ")"
+        lblCAHeader.Text = "CA Component: Test: " & TEST_PERCENTAGE * 100 & "%, Quiz:" & TEST_QUIZZES * 100 & "%, Project:" & TEST_PROJECT * 100 & "%"
+        lblModuleHeader.Text = "Module Result: (CA:" & TEST_CA_MARK * 100 & "%, Exam:" & TEST_EXAM_MARK * 100 & "%)"
 
     End Sub
 
@@ -59,17 +59,24 @@ Public Class frmCalculator
 
             If txtTest.Text = "" Or txtQuizzes.Text = "" Or txtProject.Text = "" Or txtProject.Text = "" Then
 
-                'Do nothing 
+                'Do Nothing 
 
             Else
 
                 'Add to list 
                 lstStudent_Record.Items.Add(Name)
 
-                'CA Mark
-                txtCAMark.Text = CStr(CalculatorLibrary.CA_Mark(Test, Project, Quizzes))
-                CAScore_Var = txtCAMark.Text
+                If txtExam.Text = "" Then
 
+                    'Do Nothing
+
+                Else
+
+                    'CA Mark
+                    txtCAMark.Text = CStr(CalculatorLibrary.CA_Mark(Test, Project, Quizzes))
+                    CAScore_Var = txtCAMark.Text
+
+                End If
 
                 'Moudle Mark
                 txtModule_Marks.Text = CStr(CalculatorLibrary.Module_Mark(CAScore_Var, Exam))
@@ -81,7 +88,7 @@ Public Class frmCalculator
                 'Remarks
                 txtRemarks.Text = CalculatorLibrary.Remark(Module_M, CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M))
 
-                'To Calculate the Average
+                'To Calculate the Average for Statistic
                 Average += Module_M
                 moduleAverage = Average / lstStudent_Record.Items.Count()
 
@@ -93,7 +100,7 @@ Public Class frmCalculator
                 End If
 
             End If
-        End If
+            End If
 
     End Sub
 
@@ -145,7 +152,7 @@ Public Class frmCalculator
             Dim MyConnection As OleDbConnection = New OleDbConnection
 
             Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-            DataFile = FileSystem.Dir("StudentRecord.accdb")
+            DataFile = "C:\Users\200020782\Source\Repos\Warcier\Project2021\StudentRecord.accdb"
 
             MainConnString = Provider & DataFile
             MyConnection.ConnectionString = MainConnString
@@ -217,13 +224,6 @@ Public Class frmCalculator
         End If
     End Sub
 
-    Private Sub lblCAHeader_Click(sender As Object, e As EventArgs) Handles lblCAHeader.Click
-
-    End Sub
-
-    Private Sub lblModuleHeader_Click(sender As Object, e As EventArgs) Handles lblModuleHeader.Click
-
-    End Sub
     '//////////////////////////
 
 
