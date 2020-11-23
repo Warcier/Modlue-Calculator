@@ -4,10 +4,12 @@ Public Class frmCalculator
 
     'Initializing Class
     Dim CalculatorLibrary As New CalculatorClass
+
     Dim Result As New Result
 
     'Gobal Variables for accessing all function/sub inside this Class
     Dim CountA As Integer
+
     Dim CountF As Integer
     Dim moduleAverage As Double
     Dim Average As Integer
@@ -21,7 +23,6 @@ Public Class frmCalculator
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
-
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -51,7 +52,6 @@ Public Class frmCalculator
             MsgBox("Please Input a name")
         Else
 
-
             Test = CInt(CalculatorLibrary.EmptyCheck(txtTest.Text, "Test"))
             Quizzes = CInt(CalculatorLibrary.EmptyCheck(txtQuizzes.Text, "Quizzes"))
             Project = CInt(CalculatorLibrary.EmptyCheck(txtProject.Text, "Project"))
@@ -59,17 +59,15 @@ Public Class frmCalculator
 
             If txtTest.Text = "" Or txtQuizzes.Text = "" Or txtProject.Text = "" Or txtProject.Text = "" Then
 
-                'Do Nothing 
-
+                'Do Nothing
             Else
 
-                'Add to list 
+                'Add to list
                 lstStudent_Record.Items.Add(Name)
 
                 If txtExam.Text = "" Then
 
                     'Do Nothing
-
                 Else
 
                     'CA Mark
@@ -92,15 +90,21 @@ Public Class frmCalculator
                 Average += Module_M
                 moduleAverage = Average / lstStudent_Record.Items.Count()
 
-                'Add 1 to Count A Or F 
+                'Add 1 to Count A Or F
                 If txtModule_Grade.Text = Result.A() Then
                     CountA += 1
                 ElseIf txtModule_Grade.Text = Result.F() Then
                     CountF += 1
                 End If
 
+                'Clear the Boxed If Exam Score is not input
+                If txtExam.Text = "" Then
+                    txtRemarks.Clear()
+                    txtModule_Grade.Clear()
+                    txtModule_Marks.Clear()
+                End If
             End If
-            End If
+        End If
 
     End Sub
 
@@ -137,15 +141,12 @@ Public Class frmCalculator
         End If
     End Sub
 
-
-
     'BTN For adding to database
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         If txtSTUID.Text = "" Or txtFullname.Text = "" Or txtCAMark.Text = "" Or txtModule_Grade.Text = "" Or txtModule_Marks.Text = "" Or txtRemarks.Text = "" Then
 
             MsgBox("Please input all the required Field [StudentID,CA Mark,Module Marks,Module Grade,Remarks] before adding to Database")
-
         Else
             'Adding Data to Access
             Dim Provider, DataFile, MainConnString, InsertSQL As String
@@ -171,7 +172,6 @@ Public Class frmCalculator
                 DataConnRef.Dispose()
                 MyConnection.Close()
                 MsgBox("Successsfully Added to Database")
-
             Catch Errors As Exception
                 MsgBox(Errors.Message)
             End Try
@@ -179,8 +179,6 @@ Public Class frmCalculator
         End If
 
     End Sub
-
-
 
     'Function to Clear txtBox
     Public Sub ClearTextBox()
@@ -195,7 +193,6 @@ Public Class frmCalculator
         txtExam.Clear()
         txtFullname.Clear()
     End Sub
-
 
     '//////////////////////////
     'WINDOW PANEL
@@ -226,11 +223,10 @@ Public Class frmCalculator
 
     '//////////////////////////
 
-
     '///////////////////////////////////
 End Class
 
-'All Calcutor Function 
+'All Calcutor Function
 Public Class CalculatorClass
 
     Public Property alert As MsgBoxResult
@@ -250,7 +246,6 @@ Public Class CalculatorClass
 
             CA = Test * TEST_PERCENTAGE + Project * TEST_PROJECT + Quizzes * TEST_QUIZZES
             Return CA
-
         Else
             alert = MsgBox("Please input 0 to 100 only", MsgBoxStyle.Information, alert)
             Return 0
@@ -303,15 +298,12 @@ Public Class CalculatorClass
             Else
                 Return 0 'Error
             End If
-
         Else
             alert = MsgBox("Error", MsgBoxStyle.Information, alert)
             Return alert
         End If
 
     End Function
-
-
 
     'Function to Check empty text box
     Public Function EmptyCheck(ByVal text As String, ByVal Warning As String)
@@ -322,8 +314,6 @@ Public Class CalculatorClass
         End If
 
     End Function
-
-
 
 End Class
 
@@ -357,15 +347,5 @@ Public Class Result
     Public Function F() As String
         Return "F"
     End Function
+
 End Class
-
-
-
-
-
-
-
-
-
-
-
