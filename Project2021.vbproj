@@ -139,9 +139,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StudentRecord.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="StudentRecord.accdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

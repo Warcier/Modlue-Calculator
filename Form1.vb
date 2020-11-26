@@ -14,15 +14,25 @@ Public Class frmCalculator
     Dim moduleAverage As Double
     Dim Average As Integer
 
+    'Constant For Project Scoring
     Const TEST_PERCENTAGE As Double = 0.5
+
     Const TEST_PROJECT As Double = 0.3
     Const TEST_QUIZZES As Double = 0.2
     Const TEST_CA_MARK As Double = 0.4
     Const TEST_EXAM_MARK As Double = 0.6
 
+    'Control Panel
     Dim drag As Boolean
+
     Dim mousex As Integer
     Dim mousey As Integer
+
+    'Data connection INIT
+    Dim Provider As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+
+    Dim DataFile As String = "|DataDirectory|\StudentRecord.accdb"
+    Dim MyConnection As OleDbConnection = New OleDbConnection
 
     Private Sub frmCalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -149,13 +159,9 @@ Public Class frmCalculator
             MsgBox("Please input all the required Field [StudentID,CA Mark,Module Marks,Module Grade,Remarks] before adding to Database")
         Else
             'Adding Data to Access
-            Dim Provider, DataFile, MainConnString, InsertSQL As String
-            Dim MyConnection As OleDbConnection = New OleDbConnection
+            Dim InsertSQL As String
 
-            Provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-            DataFile = "C:\Users\200020782\Source\Repos\Warcier\Project2021\StudentRecord.accdb"
-
-            MainConnString = Provider & DataFile
+            Dim MainConnString As String = Provider & DataFile
             MyConnection.ConnectionString = MainConnString
             MyConnection.Open()
             InsertSQL = "Insert into [Student Record](StudentID, FullName, CA_Mark, Module_Grade, Module_Mark, Remark) Values (?,?,?,?,?,?)"
