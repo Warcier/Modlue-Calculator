@@ -9,7 +9,6 @@ Public Class frmCalculator
 
     'Gobal Variables for accessing all function/sub inside this Class
     Dim CountA As Integer
-
     Dim CountF As Integer
     Dim moduleAverage As Double
     Dim Average As Integer
@@ -24,7 +23,6 @@ Public Class frmCalculator
 
     'Control Panel
     Dim drag As Boolean
-
     Dim mousex As Integer
     Dim mousey As Integer
 
@@ -65,56 +63,62 @@ Public Class frmCalculator
             Test = CInt(CalculatorLibrary.EmptyCheck(txtTest.Text, "Test"))
             Quizzes = CInt(CalculatorLibrary.EmptyCheck(txtQuizzes.Text, "Quizzes"))
             Project = CInt(CalculatorLibrary.EmptyCheck(txtProject.Text, "Project"))
-            Exam = CInt(CalculatorLibrary.EmptyCheck(txtExam.Text, "Exam"))
 
-            If txtTest.Text = "" Or txtQuizzes.Text = "" Or txtProject.Text = "" Or txtProject.Text = "" Then
-
+            If txtTest.Text = "" Or txtQuizzes.Text = "" Or txtProject.Text = "" Or txtExam.Text = "" Then
                 'Do Nothing
             Else
 
-                'Add to list
-                lstStudent_Record.Items.Add(Name)
+                If Not IsNumeric(txtExam.Text) Then
 
-                If txtExam.Text = "" Then
+                    MsgBox("Please input a number")
 
-                    'Do Nothing
+                ElseIf txtExam.Text < 0 Or txtExam.Text > 100 Then
+
+                    MsgBox("Please input within 0-100")
+
                 Else
-
-                    'CA Mark
+                    If txtExam.Text = "" Then
+                        MsgBox("Please input A number")
+                    Else
+                        Exam = CInt(CalculatorLibrary.EmptyCheck(txtExam.Text, "Exam"))
+                    End If
                     txtCAMark.Text = CStr(CalculatorLibrary.CA_Mark(Test, Project, Quizzes))
                     CAScore_Var = txtCAMark.Text
+                    lstStudent_Record.Items.Add(Name) 'Add to list
 
-                End If
-
-                'Moudle Mark
-                txtModule_Marks.Text = CStr(CalculatorLibrary.Module_Mark(CAScore_Var, Exam))
-                Module_M = txtModule_Marks.Text
-
-                'Module Grade
-                txtModule_Grade.Text = CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M)
-
-                'Remarks
-                txtRemarks.Text = CalculatorLibrary.Remark(Module_M, CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M))
-
-                'To Calculate the Average for Statistic
-                Average += Module_M
-                moduleAverage = Average / lstStudent_Record.Items.Count()
-
-                'Add 1 to Count A Or F
-                If txtModule_Grade.Text = Result.A() Then
-                    CountA += 1
-                ElseIf txtModule_Grade.Text = Result.F() Then
-                    CountF += 1
-                End If
-
-                'Clear the Boxed If Exam Score is not input
-                If txtExam.Text = "" Then
-                    txtRemarks.Clear()
-                    txtModule_Grade.Clear()
-                    txtModule_Marks.Clear()
                 End If
             End If
         End If
+
+        'Moudle Mark
+        txtModule_Marks.Text = CStr(CalculatorLibrary.Module_Mark(CAScore_Var, Exam))
+        Module_M = txtModule_Marks.Text
+
+        'Module Grade
+        txtModule_Grade.Text = CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M)
+
+        'Remarks
+        txtRemarks.Text = CalculatorLibrary.Remark(Module_M, CalculatorLibrary.Module_Grade(CAScore_Var, Exam, Module_M))
+
+        'To Calculate the Average for Statistic
+        Average += Module_M
+        moduleAverage = Average / lstStudent_Record.Items.Count()
+
+        'Add 1 to Count A Or F
+        If txtModule_Grade.Text = Result.A() Then
+            CountA += 1
+        ElseIf txtModule_Grade.Text = Result.F() Then
+            CountF += 1
+        End If
+
+        'Clear the Boxed If Exam Score is not input
+        If txtExam.Text = "" Then
+            txtRemarks.Clear()
+            txtModule_Grade.Clear()
+            txtModule_Marks.Clear()
+        End If
+
+
 
     End Sub
 
@@ -227,6 +231,12 @@ Public Class frmCalculator
         End If
     End Sub
 
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+        lstStudent_Record.Items.RemoveAt(lstStudent_Record.SelectedIndex)
+
+    End Sub
+
     '//////////////////////////
 
     '///////////////////////////////////
@@ -274,10 +284,12 @@ Public Class CalculatorClass
 
         If MGrade = "A" Or MGrade = "B" Or MGrade = "C" Then
             Return Result.Pass()
-        ElseIf MGrade = "F" And MMark < 30 Then
-            Return Result.Resit_Exam()
+
         ElseIf MGrade = "F" And MMark >= 30 Then
+            Return Result.Resit_Exam()
+        ElseIf MGrade = "F" And MMark < 30 Then
             Return Result.ReStudy()
+
         Else
             Return 0 'Error Message
         End If
